@@ -1,0 +1,99 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #000000;
+    font-family: lato;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    color: inherit;
+    background-color: inherit;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.nav-row {
+    background-color: #0A0A0A;
+    border-bottom: #313135;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    color: #FF9000;
+}
+
+.main-logo-link,
+.nav-link {
+    width: fit-content;
+    color: #FF9000;
+}
+
+.blue-to-yel-btn {
+    background: #067bc2;
+    color: white;
+}
+
+.explore-now-btn {
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.blue-to-yel-btn:hover,
+.blue-to-yel-btn:active,
+.blue-to-yel-btn:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #FF9000;
+    color: #000000;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-grey {
+    border: 1px solid #313135 !important;
+}
+
+.form-control,
+.form-control:focus {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
