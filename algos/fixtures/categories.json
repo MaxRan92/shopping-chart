@@ -1,0 +1,67 @@
+[
+    {
+      "pk": 1,
+      "model": "algos.category",
+      "fields": {
+        "name": "long_only",
+        "friendly_name": "Long Only"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "algos.category",
+      "fields": {
+        "name": "long_short",
+        "friendly_name": "Long Short"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "algos.category",
+      "fields": {
+        "name": "dividend",
+        "friendly_name": "Dividend"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "algos.category",
+      "fields": {
+        "name": "income",
+        "friendly_name": "Income"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "algos.category",
+      "fields": {
+        "name": "relative_value",
+        "friendly_name": "Relative Value"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "algos.category",
+      "fields": {
+        "name": "capital_gain",
+        "friendly_name": "Capital Gain"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "algos.category",
+      "fields": {
+        "name": "crypto_long_short",
+        "friendly_name": "Crypto Long Short"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "algos.category",
+      "fields": {
+        "name": "forex_long_short",
+        "friendly_name": "Forex Long Short"
+      }
+    }
+]
+  
