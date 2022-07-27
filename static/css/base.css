@@ -85,6 +85,14 @@ body {
     z-index: -1;
 }
 
+/* Algo card styling */
+.card {
+    border-radius: 5px;
+    background-color: black;
+    color: #FF9000;
+    box-shadow: 0px 0px 11px 7px rgba(6, 123, 194, 40%), 0px 0px 30px 24px rgba(6, 123, 194, 10%);
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
