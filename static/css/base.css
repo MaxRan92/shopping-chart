@@ -82,7 +82,7 @@ body {
     left: 0;
     position: fixed;
     background: black;
-    z-index: 1;
+    z-index: -1;
 }
 
 /* -------------------------------- Media Queries */
