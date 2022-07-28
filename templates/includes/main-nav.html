@@ -17,10 +17,10 @@
                 Stocks
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Long Only</a>
-                <a href="" class="dropdown-item">Long Short</a>
-                <a href="" class="dropdown-item">Dividend</a>
-                <a href="" class="dropdown-item">All Stocks Algorithms</a>
+                <a href="{% url 'algos' %}?category=long_only" class="dropdown-item">Long Only</a>
+                <a href="{% url 'algos' %}?category=long_short" class="dropdown-item">Long Short</a>
+                <a href="{% url 'algos' %}?category=dividend" class="dropdown-item">Dividend</a>
+                <a href="{% url 'algos' %}?category=long_only,long_short,dividend" class="dropdown-item">All Stocks Algorithms</a>
             </div>
         </li>
 
@@ -29,10 +29,10 @@
                 Fixed Income
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Income</a>
-                <a href="" class="dropdown-item">Relative Value</a>
-                <a href="" class="dropdown-item">Capital Gain</a>
-                <a href="" class="dropdown-item">All Fixed Income Algorithms</a>
+                <a href="{% url 'algos' %}?category=income" class="dropdown-item">Income</a>
+                <a href="{% url 'algos' %}?category=relative_value" class="dropdown-item">Relative Value</a>
+                <a href="{% url 'algos' %}?category=capital_gain" class="dropdown-item">Capital Gain</a>
+                <a href="{% url 'algos' %}?category=income,relative_value,capital_gain" class="dropdown-item">All Fixed Income Algorithms</a>
             </div>
         </li>
 
@@ -41,9 +41,9 @@
                 Crypto &amp; Forex
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Crypto Long-Short</a>
-                <a href="" class="dropdown-item">Forex Long-Short</a>
-                <a href="" class="dropdown-item">All Crypto &amp; Forex Algorithms</a>
+                <a href="{% url 'algos' %}?category=crypto_long_short" class="dropdown-item">Crypto Long-Short</a>
+                <a href="{% url 'algos' %}?category=forex_long_short" class="dropdown-item">Forex Long-Short</a>
+                <a href="{% url 'algos' %}?category=crypto_long_short,forex_long_short" class="dropdown-item">All Crypto &amp; Forex Algorithms</a>
             </div>
         </li>
     </ul>
