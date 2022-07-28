@@ -26,6 +26,13 @@
                 <div class="algo-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ algo.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ algo.price }}</p>
+                    {% if algo.category %}
+                    <p class="small mt-1 mb-0">
+                        <a href="{% url 'algos' %}?category={{ algo.category.name }}" class="text-muted">
+                            <i class="fas fa-tag mr-1"></i>{{ algo.category.friendly_name }}
+                        </a>
+                    </p>
+                    {% endif %}
                     {% if algo.rating %}
                         <small class="rating"><i class="fas fa-star mr-1"></i>{{ algo.rating }} / 5</small>
                     {% else %}

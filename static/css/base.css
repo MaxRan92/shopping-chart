@@ -108,6 +108,18 @@ body {
     color: #067bc2;
 }
 
+/* Category Badges */
+
+a.category-badge > span.badge {
+    background: #067bc2 !important;
+    color: white !important;
+}
+
+a.category-badge > span.badge:hover {
+    background: #FF9000 !important;
+    color: #black !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
