@@ -14,14 +14,14 @@ def add_to_bag(request, item_id):
     Add a quantity of the specified product to the shopping bag
     """
 
-    licensing_period = int(request.POST.get('licensing_period'))
+    license_period = int(request.POST.get('license_period'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
     if item_id in list (bag.keys()):
-        bag[item_id] += licensing_period
+        bag[item_id] += license_period
     else:
-        bag[item_id] = licensing_period
+        bag[item_id] = license_period
 
     request.session['bag'] = bag
     return redirect(redirect_url)

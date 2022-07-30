@@ -43,15 +43,41 @@
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
-                                <p class="mt-3"><strong>Licensing Period:</strong></p>
+                                <p class="mt-3"><strong>license Period:</strong></p>
+                                <!--    
                                 <div>
-                                        <select id="period" name="licensing_period" required>
-                                            <option value="" disabled selected hidden>Select a range</option>
-                                            <option value="1">1 Month</option>
-                                            <option value="3">3 Months</option>
-                                            <option value="6">6 Months</option>
-                                            <option value="12">1 Year</option>
-                                        </select>
+                                    <select id="period" name="license_period" required>
+                                        <option value="" disabled selected hidden>Select a range</option>
+                                        <option value="1">1 Month</option>
+                                        <option value="3">3 Months</option>
+                                        <option value="6">6 Months</option>
+                                        <option value="12">1 Year</option>
+                                    </select>
+                                </div>
+                                -->
+                                <div class="form-group w-50">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-license-period btn blue-to-yel-btn rounded-0" 
+                                                data-item_id="{{ algo.id }}" id="decrement-license-period_{{ algo.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-minus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control license-period-input" type="number"
+                                            name="license_period" value="1" min="1" max="99"
+                                            data-item_id="{{ algo.id }}"
+                                            id="id_license_period_{{ algo.id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-license-period btn blue-to-yel-btn rounded-0"
+                                                data-item_id="{{ algo.id }}" id="increment-license-period_{{ algo.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-plus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -70,4 +96,9 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'algos/includes/license_period_input_script.html' %}
 {% endblock %}

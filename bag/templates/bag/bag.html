@@ -29,7 +29,7 @@
                                     <th scope="col">Algorithm info</th>
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
-                                    <th scope="col">Licensing Period</th>
+                                    <th scope="col">license Period</th>
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
@@ -51,7 +51,7 @@
                                         <p class="my-0">${{ item.algo.price}}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.licensing_period }} Months</p>
+                                        <p class="my-0">{{ item.license_period }} Months</p>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.algo.price}}</p>
@@ -65,14 +65,14 @@
                                     <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if discount_delta > 0 %}
                                         <p class="mb-1 text-danger">
-                                            You could get free delivery by spending just <strong>${{ discount_delta }}</strong> more!
+                                            You could get a {{ discount_perc }}% discount by spending just <strong>${{ discount_delta }}</strong> more!
                                         </p>
                                     {% endif %}
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'algos' %}" class="btn btn-outline-black rounded-0 btn-lg blue-to-yel-btn>
+                                    <a href="{% url 'algos' %}" class="btn btn-outline-black rounded-0 btn-lg blue-to-yel-btn">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>

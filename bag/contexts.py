@@ -11,12 +11,12 @@ def bag_contents(request):
     discount_perc = settings.DISCOUNT_PERCENTAGE
     bag = request.session.get('bag', {})
 
-    for item_id, licensing_period in bag.items():
+    for item_id, license_period in bag.items():
         algo = get_object_or_404(Algo, pk=item_id)
-        total += licensing_period * algo.price
+        total += license_period * algo.price
         bag_items.append({
             'item_id': item_id,
-            'licensing_period': licensing_period,
+            'license_period': license_period,
             'algo': algo,
         })
 
