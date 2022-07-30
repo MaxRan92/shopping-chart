@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.contrib import messages
+
+from algos.models import Algo
 
 # Create your views here.
 
@@ -14,6 +17,7 @@ def add_to_bag(request, item_id):
     Add a quantity of the specified product to the shopping bag
     """
 
+    algo = Algo.objects.get(pk=item_id)
     license_period = int(request.POST.get('license_period'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
@@ -22,6 +26,7 @@ def add_to_bag(request, item_id):
         bag[item_id] += license_period
     else:
         bag[item_id] = license_period
+        messages.success(request, f'Added {algo.name} to your bag')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
