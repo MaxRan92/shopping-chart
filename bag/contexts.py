@@ -7,7 +7,7 @@ def bag_contents(request):
 
     bag_items = []
     total = 0
-    product_count = 0
+    algo_count = 0
     discount_perc = settings.DISCOUNT_PERCENTAGE
     bag = request.session.get('bag', {})
 
@@ -29,10 +29,13 @@ def bag_contents(request):
     
     grand_total = total - discount_abs
 
+    # algo_count = len(bag.items['item_id'])
+    algo_count = len(bag_items)
+
     context = {
         'bag_items': bag_items,
         'total': total,
-        'product_count': product_count,
+        'algo_count': algo_count,
         'discount_abs': discount_abs,
         'discount_perc': discount_perc,
         'discount_threshold': settings.DISCOUNT_THRESHOLD,

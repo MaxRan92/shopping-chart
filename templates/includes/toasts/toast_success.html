@@ -8,6 +8,50 @@
         </button>
     </div>
     <div class="toast-body bg-white">
-        {{ message }}        
+        <div class="row">
+            <div class="col"> 
+                {{ message }}        
+                <hr class="mt-1 mb-3">
+            </div>
+        </div>
+        {% if grand_total %}
+            <p class="logo-font bg-white text-black py-1">Your Bag ({{ algo_count }} Algorithms)</p>
+            <div class="bag-notification-wrapper">
+                {% for item in bag_items %}
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            {% if item.algo.image %}
+                                <img src="{{ item.algo.image }}" alt="algorithm image" class="w-100">
+                            {% else %}
+                                <img class="w-100" src="/media/noimage.png" alt="{{ algo.name }}">
+                            {% endif %}
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0"><strong>{{ item.algo.name }}</strong></p>
+                            <p class="my-0 small">License period: {{ item.license_period }}</p>     
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <strong><p class="mt-3 mb-1 text-black">
+                        Total: 
+                        <span class="float-right">${{ total|floatformat:2 }}</span>
+                    </p></strong>
+                    {% if discount_delta > 0 %}
+                        <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">
+                            Spend <strong>${{ discount_delta }}</strong> more to get a {{ discount_perc }}% discount on your order!
+                        </p>
+                    {% endif %}
+                    <a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-0">
+                        <span class="text-uppercase">Go To Secure Checkout</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
     </div>
 </div>
