@@ -51,7 +51,7 @@
                                         <p class="my-0">${{ item.algo.price}}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form action="" class="form update-form" method="POST">
+                                        <form action="{% url 'adjust_bag' item.item_id %}" class="form update-form" method="POST">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -78,6 +78,8 @@
                                                 </div>
                                             </div>
                                         </form>
+                                        <a class="update-link text-info"><small>Update</small></a>
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.algo.price}}</p>
@@ -132,4 +134,26 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'algos/includes/license_period_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}"
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken}
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+    
+</script>
 {% endblock %}
