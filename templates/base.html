@@ -110,6 +110,11 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-black text-white">
+                <h4 class="logo-font my-1">{{ discount_perc }}% discount on orders over ${{ discount_threshold }}!</h4>
+            </div>
+        </div>
     </header>
 
     {% if messages %}
