@@ -29,7 +29,7 @@
                                     <th scope="col">Algorithm info</th>
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
-                                    <th scope="col">license Period</th>
+                                    <th scope="col">License Period (Months)</th>
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
@@ -51,7 +51,33 @@
                                         <p class="my-0">${{ item.algo.price}}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.license_period }} Months</p>
+                                        <form action="" class="form update-form" method="POST">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <button class="decrement-license-period btn btn-sm blue-to-yel-btn rounded-0" 
+                                                            data-item_id="{{ item.item_id }}" id="decrement-license-period_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-minus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <input class="form-control form-control-sm license-period-input" type="number"
+                                                        name="license_period" value="{{ item.license_period }}" min="1" max="99"
+                                                        data-item_id="{{ item.item_id }}"
+                                                        id="id_license_period_{{ item.item_id }}">
+                                                    <div class="input-group-append">
+                                                        <button class="increment-license-period btn btn-sm blue-to-yel-btn rounded-0"
+                                                            data-item_id="{{ item.item_id }}" id="increment-license-period_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-plus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.algo.price}}</p>
@@ -78,7 +104,7 @@
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <a href="" class="btn btn-black rounded-0 btn-lg blue-to-yel-btn">
+                                    <a href="" class="btn rounded-0 btn-lg blue-to-yel-btn">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
@@ -87,7 +113,6 @@
                                 </td>
                             </tr>
                         </table>
-                       
                     </div>
                 {% else %}
                     <p class="lead mb-5 text-white">Your bag is empty.</p>
@@ -102,4 +127,9 @@
         </div>
     </div>
     
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'algos/includes/license_period_input_script.html' %}
 {% endblock %}
