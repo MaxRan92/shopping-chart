@@ -22,8 +22,10 @@ def bag_contents(request):
 
     if total < settings.DISCOUNT_THRESHOLD:
         discount_abs = 0
+        discount_delta = settings.DISCOUNT_THRESHOLD - total 
     else:
         discount_abs = total * Decimal(discount_perc / 100)
+        discount_delta = 0
     
     grand_total = total - discount_abs
 
@@ -35,6 +37,7 @@ def bag_contents(request):
         'discount_perc': discount_perc,
         'discount_threshold': settings.DISCOUNT_THRESHOLD,
         'grand_total': grand_total,
+        'discount_delta': discount_delta,
     }
 
     return context
