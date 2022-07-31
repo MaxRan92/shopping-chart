@@ -44,7 +44,8 @@ class Order(models.Model):
     
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the order number if it hasn't been set already
+        Override the original save method to set the order
+        number if it hasn't been set already
         """
         if not self.order_number:
             self.order_number = self._generate_order_number()
@@ -61,11 +62,11 @@ class OrderLineItem(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the lineitem total and update order total
+        Override the original save method to set the lineitem
+        total and update order total
         """
         self.lineitem_total = self.algo.price * self.license_period
         super().save(*args, **kwargs)
-    
+
     def __str__(self):
         return f'SKU {self.algo.sku} on order {self.order.order_number}'
-
