@@ -36,6 +36,10 @@ body {
     color: #FF9000;
 }
 
+.text-orange {
+    color: #FF9000;
+}
+
 .main-logo-link,
 .nav-link {
     width: fit-content;
