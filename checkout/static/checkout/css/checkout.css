@@ -36,6 +36,17 @@
     color: white;
 }
 
+select,
+select option {
+  color: white;
+  background-color: #313135;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #aab7c4 !important;
+}
+
 .fieldset-label {
   position: relative;
   right: .5rem;
