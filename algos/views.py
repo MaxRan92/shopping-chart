@@ -97,3 +97,26 @@ def add_algo(request):
     }
 
     return render(request, template, context)
+
+def edit_algo(request, algo_id):
+    """ Edit an algorithm in the store """
+    algo = get_object_or_404(Algo, pk=algo_id)
+    if request.method == 'POST':
+        form = AlgoForm(request.POST, request.FILES, instance=algo)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated algorithm!')
+            return redirect(reverse('algo_detail', args=[algo.id]))
+        else:
+            messages.error(request, 'Failed to update algorithm. Please ensure the form is valid.')
+    else:
+        form = AlgoForm(instance=algo)
+        messages.info(request, f'You are editing {algo.name}')
+
+    template = 'algos/edit_algo.html'
+    context = {
+        'form': form,
+        'algo': algo,
+    }
+
+    return render(request, template, context)
