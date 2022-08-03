@@ -1,4 +1,5 @@
 from django import forms
+from .widgets import CustomClearableFileInput
 from .models import Algo, Category
 
 
@@ -7,6 +8,8 @@ class AlgoForm(forms.ModelForm):
     class Meta:
         model = Algo
         fields = '__all__'
+
+    image = forms.ImageField(label='image', required=False, widget=CustomClearableFileInput)
 
     # Make changes to the fields: categories showing
     # with their friendly name
