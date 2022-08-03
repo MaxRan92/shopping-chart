@@ -83,9 +83,9 @@ def add_algo(request):
     if request.method == 'POST':
         form = AlgoForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            algo = form.save()
             messages.success(request, 'Successfully added algorithm')
-            return redirect(reverse('add_algo'))
+            return redirect(reverse('algo_detail', args=[algo.id]))
         else:
             messages.error(request, 'Failed to add algorithm, please ensure the form is valid.')
     else:
@@ -97,6 +97,7 @@ def add_algo(request):
     }
 
     return render(request, template, context)
+
 
 def edit_algo(request, algo_id):
     """ Edit an algorithm in the store """
@@ -120,3 +121,11 @@ def edit_algo(request, algo_id):
     }
 
     return render(request, template, context)
+
+
+def delete_algo(request, algo_id):
+    """ Delete an algorithm from the store """
+    algo = get_object_or_404(Algo, pk=algo_id)
+    algo.delete()
+    messages.success(request, 'Algorithm deleted!')
+    return redirect(reverse('algos'))
