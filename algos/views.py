@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 from .models import Algo, Category
 from django.db.models.functions import Lower
 from shopping_chart.settings import MEDIA_URL
@@ -76,10 +77,15 @@ def algo_detail(request, algo_id):
 
     return render(request, 'algos/algo_detail.html', context)
 
+@login_required
 def add_algo(request):
     """
     Add an algorithm to the store
     """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = AlgoForm(request.POST, request.FILES)
         if form.is_valid():
@@ -99,8 +105,13 @@ def add_algo(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_algo(request, algo_id):
     """ Edit an algorithm in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     algo = get_object_or_404(Algo, pk=algo_id)
     if request.method == 'POST':
         form = AlgoForm(request.POST, request.FILES, instance=algo)
@@ -123,8 +134,13 @@ def edit_algo(request, algo_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_algo(request, algo_id):
     """ Delete an algorithm from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+        
     algo = get_object_or_404(Algo, pk=algo_id)
     algo.delete()
     messages.success(request, 'Algorithm deleted!')
