@@ -4,6 +4,7 @@ from django.db.models import Q
 from .models import Algo, Category
 from django.db.models.functions import Lower
 from shopping_chart.settings import MEDIA_URL
+from .forms import AlgoForm
 
 # Create your views here.
 
@@ -74,3 +75,15 @@ def algo_detail(request, algo_id):
     }
 
     return render(request, 'algos/algo_detail.html', context)
+
+def add_algo(request):
+    """
+    Add a product to the store
+    """
+    form = AlgoForm()
+    template = 'algos/add_algo.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
