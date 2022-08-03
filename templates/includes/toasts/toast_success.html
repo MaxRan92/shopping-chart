@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col-3 my-1">
                             {% if item.algo.image %}
-                                <img src="{{ item.algo.image }}" alt="algorithm image" class="w-100">
+                                <img src="{{ item.algo.image.url }}" alt="algorithm image" class="w-100">
                             {% else %}
                                 <img class="w-100" src="/media/noimage.png" alt="{{ algo.name }}">
                             {% endif %}

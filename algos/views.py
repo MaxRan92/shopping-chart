@@ -78,9 +78,19 @@ def algo_detail(request, algo_id):
 
 def add_algo(request):
     """
-    Add a product to the store
+    Add an algorithm to the store
     """
-    form = AlgoForm()
+    if request.method == 'POST':
+        form = AlgoForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added algorithm')
+            return redirect(reverse('add_algo'))
+        else:
+            messages.error(request, 'Failed to add algorithm, please ensure the form is valid.')
+    else:
+        form = AlgoForm()
+
     template = 'algos/add_algo.html'
     context = {
         'form': form,
