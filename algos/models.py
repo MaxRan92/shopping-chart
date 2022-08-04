@@ -27,28 +27,3 @@ class Algo(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class Comment(models.Model):
-    '''
-    Django model for the information stored
-    for each comment. Each comment is linked to one
-    stock via one-to-many relationship. The on_delete
-    CASCADE specification allows to delete all the comment
-    of a stock when the latter is deleted.
-    '''
-
-    algo = models.ForeignKey(
-        Algo, on_delete=models.CASCADE, related_name="comments")
-    name = models.CharField(max_length=80)
-    body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        """
-        Set ordering
-        """
-        ordering = ["created_on"]
-
-    def __str__(self):
-        return f"Comment {self.body} by {self.name}"

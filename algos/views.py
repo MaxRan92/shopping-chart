@@ -77,6 +77,7 @@ def algo_detail(request, algo_id):
 
     return render(request, 'algos/algo_detail.html', context)
 
+
 @login_required
 def add_algo(request):
     """
