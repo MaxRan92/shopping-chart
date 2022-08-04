@@ -7,3 +7,4 @@ def view_blog(request):
     A view to return the blog page
     """
     return render(request, 'blog.html')
+
