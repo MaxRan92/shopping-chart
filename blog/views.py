@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Post
 from shopping_chart.settings import MEDIA_URL
 from django.views import generic, View
@@ -17,3 +17,29 @@ def view_blog(request):
     }
 
     return render(request, 'blog.html', context)
+
+def post_detail(request, post_id):
+    """ A view to show a single blog post """
+
+    post = get_object_or_404(Post, pk=post_id)
+
+    context = {
+        'post': post,
+    }
+
+    return render(request, 'post_detail.html', context)
+
+
+class PostDetail(View):
+
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+
+        return render(
+            request,
+            "post_detail.html",
+            {
+                "post": post,
+            },
+        )
