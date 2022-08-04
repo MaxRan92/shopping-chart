@@ -1,6 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Algo, Category
+from .models import Algo, Category, Comment
 
 
 class AlgoForm(forms.ModelForm):
@@ -22,3 +22,18 @@ class AlgoForm(forms.ModelForm):
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
     
+
+class CommentForm(forms.ModelForm):
+    '''
+    Form to add a comment and
+    insert a sentiment
+    '''
+    class Meta:
+        """
+        Link for to model, set fields and labels
+        """
+        model = Comment
+        fields = ('body',)
+        labels = {
+            "body": "Share your idea on this ticker",
+        }
