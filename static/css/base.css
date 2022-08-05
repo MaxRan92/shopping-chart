@@ -98,6 +98,11 @@ body {
     z-index: -1;
 }
 
+#id_body {
+    background-color: white !important;
+    color: #000 !important;
+}
+
 /* Algo card styling */
 .card,
 .card-img-top {
