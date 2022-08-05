@@ -183,6 +183,3 @@ DEFAULT_FROM_EMAIL = 'shoppingchart@example.com'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Summernote
-SUMMERNOTE_THEME = 'bs5'
