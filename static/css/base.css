@@ -121,6 +121,12 @@ body {
     color: #067bc2;
 }
 
+/* Post Detail */
+
+.image-container {
+    max-width: 66%;
+}
+
 /* Category Badges */
 
 a.category-badge > span.badge {
