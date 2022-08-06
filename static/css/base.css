@@ -67,8 +67,8 @@ body {
 }
 
 .blue-to-yel-btn {
-    background: #067bc2;
-    color: white;
+    background: #067bc2 !important;
+    color: white !important;
 }
 
 .explore-now-btn {
@@ -86,8 +86,8 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #FF9000;
-    color: #000000;
+    background: #FF9000 !important;
+    color: #000000 !important;
 }
 
 .text-black {
