@@ -38,10 +38,11 @@ body {
     width: 1.5rem;
 }
 
-.nav-row {
+.nav-row,
+#discount-banner {
     background-color: #0A0A0A;
     border-bottom: #313135;
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
 }
 
@@ -358,7 +359,7 @@ a.category-badge > span.badge:hover {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 157px;
     }
 }
 
