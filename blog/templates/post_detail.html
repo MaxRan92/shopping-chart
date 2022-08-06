@@ -69,11 +69,11 @@
                                         {% if comment.name == request.user.username %}
                                         <div class="col-md-2">
                                             <a class="btn btn-submit btn-edit fw-bold"
-                                                href="">Edit</a>
+                                                href="{% url 'edit_comment' post.slug comment.pk %}">Edit</a>
                                         </div>
                                         <div class="col-md-2">
                                             <a class="btn btn-submit btn-delete fw-bold"
-                                                href="">Delete</a>
+                                                href="{% url 'delete_comment' post.slug comment.pk %}">Delete</a>
                                         </div>
                                         {% endif %}
                                     </div>

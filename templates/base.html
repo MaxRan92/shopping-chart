@@ -129,7 +129,11 @@
     </header>
 
     {% if messages %}
-    <div class="message-container">
+    {% if blog_message %}
+        <div class="message-container message-blog">
+    {% else %}
+        <div class="message-container message-bag">
+    {% endif %}
         {% for message in messages %}
             {% with message.level as level %}
                 {% if level == 40 %}
