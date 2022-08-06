@@ -46,8 +46,8 @@
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row nav-row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2>Shopping Chart</h2>
+                <a href="{% url 'home' %}">
+                        <img src="{{ MEDIA_URL }}logo-text.png" width="260" height="57" alt="Shopping Chart logo">
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -114,7 +114,7 @@
         </div>
         <div class="row nav-row">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler blue-to-yel-btn" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
@@ -155,6 +155,31 @@
 
     {% block content %}
     {% endblock %}
+
+    <footer>
+        <div class="row">
+            <div class="col footer-container">
+                <div>
+                    <img src="{{ MEDIA_URL }}logo-text.png" width="180" height="39" alt="Shopping Chart logo">
+                    <div class="social-icons">
+                        <a href="https://github.com" aria-label="Go to GitHub" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/" aria-label="Go to LinkedIn" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="https://twitter.com/" aria-label="Go to Twitter" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p>© 2022</p>
+    </footer>
 
     {% block postloadjs %}
     <script type="text/javascript">
