@@ -29,7 +29,7 @@ def view_blog(request):
 class PostDetail(View):
 
     # Variables declaration
-    comment_deleted = comment_edited = False
+    comment_deleted = comment_edited = comment_created = False
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -71,8 +71,10 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            messages.success(request, f'Your comment has been posted!')
         else:
             comment_form = CommentForm()
+        
         
         return render(
             request,
@@ -80,7 +82,7 @@ class PostDetail(View):
             {
                 "post": post,
                 "comments": comments,
-                "commented": True,
+                "blog_message": True,
                 "comment_form": CommentForm,
             },
         )
