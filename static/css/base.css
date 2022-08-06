@@ -3,8 +3,28 @@ html {
 }
 
 body {
-    background-color: #000000;
     font-family: lato;
+    background-color: #000;
+}
+
+.home-banner {
+    background: url('/media/SC_Home_Banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
+.background-1 {
+    background: url('/media/SC_Background01.jpg');
+    background-repeat: repeat-y;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
+.background-2 {
+    background: url('/media/SC_Background02.jpg');
+    background-repeat: repeat-y;
+    background-size: 100%;
+    min-height: 100%;
 }
 
 /* from Bulma */
@@ -114,6 +134,8 @@ body {
 
 /* Algo detail styling */
 .algo-details-container {
+    padding: 10px;
+    border-radius: 5px;
     background-color: black;
     color: #FF9000;
 }
