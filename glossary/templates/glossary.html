@@ -11,13 +11,15 @@
 
 {% block content %}
 <div class="background-3">
-    <h2 class="logo-font text-center py-5">Glossary</h2>
+    <h2 class="logo-font text-center py-3">Glossary</h2>
     <div class="container h-100">
+            <hr class="grey-line">
             {% for term in terms %}
             <div class="row text-white mb-3 py-3">
-                <div class="col-4 col-md-2 text-right">{{ term.term }}</div>
+                <div class="col-4 col-md-2 text-right font-weight-bold">{{ term.term }}</div>
                 <div class="col-8 col-md-10">{{ term.description }}</div>
             </div>
+            <hr class="grey-line">
             {% endfor %}
     </div>
 </div>
