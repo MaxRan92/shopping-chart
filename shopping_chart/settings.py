@@ -130,6 +130,7 @@ DATABASES = {
     }
 }
 
+
 # DATABASES = {
 #     'default': dj_database_url.parse('postgres://iwiowwycsrlvsx:8e256e3b68183033f56684b55d25490b6feefa91dfa7eaf2b7b5c1723a3384b5@ec2-63-34-180-86.eu-west-1.compute.amazonaws.com:5432/d4vhqf59psr1hl')
 # }
