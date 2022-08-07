@@ -16,7 +16,7 @@
         <!-- Message if comment is posted, edited or deleted -->
         <div>
             <!-- Comment form -->
-            <h3 class="text-white">Add a term:</h3>
+            <h3 class="text-white mt-3">Add a term:</h3>
             <form method="post" class="text-white">
                 {{ form | crispy }}
                 {% csrf_token %}
@@ -33,14 +33,14 @@
             {% for term in terms %}
             <div class="row text-white mb-3 py-3">
                 <div class="col-4 col-md-2 text-right font-weight-bold">{{ term.term }}</div>
-                <div class="col-8 col-md-10">{{ term.description }}</div>
+                <div class="col-8 col-md-8">{{ term.description }}</div>
                 {% if user.is_superuser %}
-                    <div class="col-md-2">
-                        <a class="btn btn-submit btn-edit fw-bold"
-                            href="">Edit</a>
+                    <div class="col-4 col-md-1 text-center mt-3">
+                        <a class="btn btn-submit btn-edit blue-to-yel-btn fw-bold"
+                            href="{% url 'edit_term' term.pk %}">Edit</a>
                     </div>
-                    <div class="col-md-2">
-                        <a class="btn btn-submit btn-delete fw-bold"
+                    <div class="col-8 col-md-1 text-center mt-3">
+                        <a class="btn btn-submit blue-to-yel-btn btn-delete fw-boldr"
                             href="{% url 'delete_term' term.pk %}">Delete</a>
                     </div>
                 {% endif %}
