@@ -11,6 +11,22 @@
 
 {% block content %}
 <div class="background-3">
+    {% if user.is_superuser %}
+    <div class="container col-12 col-md-10">
+        <!-- Message if comment is posted, edited or deleted -->
+        <div>
+            <!-- Comment form -->
+            <h3 class="text-white">Add a term:</h3>
+            <form method="post" class="text-white">
+                {{ form | crispy }}
+                {% csrf_token %}
+                <button type="submit"
+                    class="btn blue-to-yel-btn btn-lg btn-post-comment fw-bold">Submit</button>
+            </form>
+        </div>
+    </div>
+    {% endif %}
+    
     <h2 class="logo-font text-center py-3">Glossary</h2>
     <div class="container h-100">
             <hr class="grey-line">
