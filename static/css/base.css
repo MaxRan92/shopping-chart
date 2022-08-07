@@ -385,7 +385,7 @@ a.category-badge > span.badge:hover {
     -ms-user-select: none;
     user-select: none;
     background-color: #000;
-    border: 1px solid #000;
+    border: 1px solid #067bc2;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -499,7 +499,9 @@ a.category-badge > span.badge:hover {
         padding-top: 99px;
     }
 
-    .btn.blue-to-yel-btn.rounded-0 {
+    .btn.blue-to-yel-btn.rounded-0.mt-5,
+    .btn.blue-to-yel-btn.rounded-0.increment-license-period,
+    .btn.blue-to-yel-btn.rounded-0.decrement-license-period {
         padding: 0.375rem 0.375rem;
         font-size: .75rem;
         height: 36px;
