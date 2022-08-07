@@ -4,19 +4,21 @@
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font">Shopping Chart Blog</h2>
-        </div>
+        <div class="col"></div>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
 <div class="background-3">
+    <h2 class="logo-font text-center py-5">Glossary</h2>
     <div class="container h-100">
-        <div class="row py-5">
-            This is the glossary
-        </div>
+            {% for term in terms %}
+            <div class="row text-white mb-3 py-3">
+                <div class="col-4 col-md-2 text-right">{{ term.term }}</div>
+                <div class="col-8 col-md-10">{{ term.description }}</div>
+            </div>
+            {% endfor %}
     </div>
 </div>
 {% endblock %}

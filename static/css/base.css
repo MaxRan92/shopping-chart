@@ -194,10 +194,20 @@ footer p {
     margin: 2px 0;
 }
 
-/* Comment Edit Form */
+/* Comments */
 .comment-editor .requiredField {
     color: white;
 }
+
+.comment-container {
+    padding-bottom: 20px;
+}
+
+/* To not overlap with footer */
+.spacer {
+    height: 110px;
+}
+
 
 /* Blog Posts */
 .blog-btn {
@@ -251,12 +261,13 @@ a.category-badge > span.badge:hover {
     color: #black !important;
 }
 
+
 /* Scroll up button */
 .btt-button {
     height: 42px;
     width: 42px;
     position: fixed;
-    bottom: 10px;
+    bottom: 120px;
     right: 10px;
 }
 

@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown my-auto">
-            <a class="logo-font font-weight-bold mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold mr-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Algorithms
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
@@ -13,7 +13,7 @@
         </li>
 
         <li class="nav-item dropdown my-auto">
-            <a class="logo-font font-weight-bold mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold mr-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Stocks
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
@@ -25,7 +25,7 @@
         </li>
 
         <li class="nav-item dropdown my-auto">
-            <a class="logo-font font-weight-bold mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold mr-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Fixed Income
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
@@ -37,7 +37,7 @@
         </li>
 
         <li class="nav-item dropdown my-auto">
-            <a class="logo-font font-weight-bold mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold mr-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Crypto &amp; Forex
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
@@ -45,6 +45,16 @@
                 <a href="{% url 'algos' %}?category=forex_long_short" class="dropdown-item">Forex Long-Short</a>
                 <a href="{% url 'algos' %}?category=crypto_long_short,forex_long_short" class="dropdown-item">All Crypto &amp; Forex Algorithms</a>
             </div>
+        </li>
+        <li class="nav-item dropdown my-auto">
+            <a class="logo-font font-weight-bold mr-5" href="{% url 'view_terms' %}">
+                Glossary
+            </a>
+        </li>
+        <li class="nav-item dropdown my-auto">
+            <a class="logo-font font-weight-bold mr-5" href="{% url 'view_blog' %}">
+                Blog
+            </a>
         </li>
     </ul>
 </div>
