@@ -30,7 +30,7 @@ a:hover {
     background: url('/media/SC_Background03.jpg');
     background-repeat: repeat-y;
     background-size: 100%;
-    min-height: 100vh;
+    min-height: 75vh;
 }
 
 /* from Bulma */
@@ -403,6 +403,10 @@ a.category-badge > span.badge:hover {
 
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
+}
+
+.allauth-container {
+    min-height: 65vh;
 }
 
 

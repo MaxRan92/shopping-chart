@@ -1,30 +1,32 @@
 {% extends "base.html" %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 {% load crispy_forms_tags %}
 <!--If user is authenticated render view to update review.-->
-<div class="container">
-    {% if user.is_superuser %}
-    <div class="card-container my-5">
-        <div class="element-card comment-editor">
-            <div class="col-12">
-                <h3 class="fw-bold fs-3 text-white">Edit the Term </h3>
-                <form method="post">
-                    {{ form | crispy }}
-                    {% csrf_token %}
-                    <button class="submit-btn btn blue-to-yel-btn btn-post-comment" type="submit">Post</button>
-                </form>
+<div class="background-3">
+    <div class="container">
+        {% if user.is_superuser %}
+        <div class="card-container my-5">
+            <div class="element-card comment-editor">
+                <div class="col-12">
+                    <h3 class="fw-bold fs-3 text-white">Edit the Term </h3>
+                    <form method="post">
+                        {{ form | crispy }}
+                        {% csrf_token %}
+                        <button class="submit-btn btn blue-to-yel-btn btn-post-comment" type="submit">Post</button>
+                    </form>
+                </div>
             </div>
         </div>
+        {% endif %}
     </div>
-    {% endif %}
 </div>
 {%endblock%}
