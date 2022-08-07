@@ -34,6 +34,16 @@
             <div class="row text-white mb-3 py-3">
                 <div class="col-4 col-md-2 text-right font-weight-bold">{{ term.term }}</div>
                 <div class="col-8 col-md-10">{{ term.description }}</div>
+                {% if user.is_superuser %}
+                    <div class="col-md-2">
+                        <a class="btn btn-submit btn-edit fw-bold"
+                            href="">Edit</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a class="btn btn-submit btn-delete fw-bold"
+                            href="{% url 'delete_term' term.pk %}">Delete</a>
+                    </div>
+                {% endif %}
             </div>
             <hr class="grey-line">
             {% endfor %}
