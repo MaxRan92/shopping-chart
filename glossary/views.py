@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse, redirect
 from .models import Terms
 from .forms import TermForm
 from django.contrib import messages
@@ -13,9 +13,18 @@ def view_glossary(request):
     terms = Terms.objects.all()
     form = TermForm(request.POST or None)
 
+    if request.method == 'POST':
+        form = TermForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request,
+                'The new term has been submitted')
+            return redirect(reverse('view_terms'))
+
     context = {
         'terms': terms,
         'form': form,
     }
-
+    
     return render(request, 'glossary.html', context)

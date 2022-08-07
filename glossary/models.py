@@ -7,7 +7,6 @@ from algos.models import Category
 class Terms(models.Model):
 
     term = models.CharField(max_length=254)
-    slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField()
 
     class Meta:
