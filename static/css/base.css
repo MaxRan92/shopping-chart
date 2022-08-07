@@ -194,6 +194,17 @@ footer p {
     margin: 2px 0;
 }
 
+/* Comment Edit Form */
+.comment-editor .requiredField {
+    color: white;
+}
+
+/* Blog Posts */
+.blog-btn {
+    position: static;
+    bottom: 0;
+}
+
 /* Algo card styling */
 .card,
 .card-img-top {

@@ -29,5 +29,5 @@ class EditForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
         labels = {
-            "body": "Post a comment:",
+            "body": "Change the comment and click post to submit",
         }
