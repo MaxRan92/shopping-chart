@@ -9,7 +9,9 @@ Order Total: ${{ order.order_total }}
 Discount: ${{ order.discount }}
 Grand Total: ${{ order.grand_total }}
 
-Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+Your receipt will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
+Below you may find the link to access the code: [LINK]
 
 We've got your phone number on file as {{ order.phone_number }}.
 
