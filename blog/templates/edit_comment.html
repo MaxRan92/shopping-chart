@@ -11,6 +11,7 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <!--If user is authenticated render view to update review.-->
+<div class="background-3">
 <div class="container">
     {% if user.is_authenticated %}
     <div class="card-container my-5">
@@ -27,5 +28,6 @@
         </div>
     </div>
     {% endif %}
+</div>
 </div>
 {%endblock%}
