@@ -14,9 +14,9 @@
 {% block content %}
 <div class="background-3">
     <div class="container h-100">
-        <div class="row py-5">
+        <div class="row py-5 h-100">
             {% for post in posts %}
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 h-100">
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card h-100 border-0">
                     {% if post.featured_image %}
                     <img class="card-img-top img-fluid" src="{{ post.featured_image.url }}" alt="{{ post.name }}">
@@ -26,7 +26,7 @@
                     <div class="card-body pb-0">
                         <h5 class="mb-3 card-title h-25">{{ post.title }}</h5>
                         <p class="card-text mt-1">{{ post.excerpt }}</p>
-                        <a href="{% url 'post_detail' post.slug %}" class="btn blue-to-yel-btn my-2 blog-btn">Read More</a>
+                        <a href="{% url 'post_detail' post.slug %}" class="btn blue-to-yel-btn blog-btn">Read More</a>
                     </div>
                 </div>
             </div>
