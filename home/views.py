@@ -1,3 +1,7 @@
+"""
+Credits: the code is inspired and adapted from the
+Code Institute Boutique Ado Project
+"""
 from django.shortcuts import render, redirect, reverse
 from newsletter.forms import NewsletterForm
 from newsletter.models import Newsletter
@@ -15,7 +19,8 @@ def index(request):
         print(form.errors)
         if form.is_valid:
             form.save()
-            messages.success(request, 'Thank you for subscribing to our newsletter!')
+            messages.success(request, 'Thank you for subscribing \
+                to our newsletter!')
             return redirect(reverse('home'))
         messages.error(request, 'There was an error please try again')
 
