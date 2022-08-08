@@ -6,6 +6,10 @@ The deployed site can be found [HERE](https://mr-shopping-chart.herokuapp.com/)
 
 ![Title](readme/images/amiresponsive.png)
 
+<br/>
+<br/>
+<br/>
+
 # SECTION 1: UX
 
 ## 1. Strategy
@@ -101,6 +105,11 @@ Via collecting user emails, Shopping Chart plans to send out a weekly newsletter
 
 To boost the SEO ranking and marketing, Shopping Chart plans to also include Paid Web Marketing in the marketing strategy. The main search engine to rank and to target is Google Search, for that reason, we will focus on planning advertising campaigns on Google Search Ads. The strategy will include creating ad campaigns on the defined keywords and to target a certain demographic that fits our users and to start within a geographical area.
 
+<br/>
+<br/>
+<br/>
+
+# SECTION 2: User Stories
 
 ## Scope and AGILE method
 
@@ -143,3 +152,45 @@ The Scope of the site is broadly encompassed in the follwing main tasks:
 
 
 To deliver the scope of the project, an Agile approach to Software Development has been pursued for the project implementation. The tool used for this purpose is the **Github Kanban board** functionality, managing the life cycle of the issues from *To Do's* to *in progress* and eventually *Done*. 
+
+
+<br/>
+<br/>
+<br/>
+
+# SECTION 3: FULL STACK WEBSITE IMPLEMENTATION
+
+The overall website is implemented via the Django Framework functionality
+
+## Back-End: Database Structure
+The site uses PostgrSQL, which is an open-source relational database system compatible with most programming languages.
+The database schema below illustrates the Data Model and Fields created, with the relationship between them.
+
+INSERT DIAGRAM HERE
+
+## Front-End: Site Structure
+Below are presented the wireframes created during the site project planning, which consitutes a first draft on how the site should appear, taking into consideration the user stories included.
+
+- Wireframe 1 - Homepage
+
+![Home page](readme/images/homepage-wireframe.png)
+
+- Wireframe 2 - Algorithm list
+
+![Algorithm List page](readme/images/algo-list-wireframe.png)
+
+- Wireframe 3 - Algorithm detail
+
+![Algorithm Detail page](readme/images/algo-detail-wireframe.png)
+
+- Wireframe 4 - Shopping Bag page
+
+![Bag page](readme/images/bag-wireframe.png)
+
+- Wireframe 5 - Blog
+
+![Blog](readme/images/blog-wireframe.png)
+
+- Wireframe 6 - Glossary
+
+![Glossary](readme/images/glossary-wireframe.png)
