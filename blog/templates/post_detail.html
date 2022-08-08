@@ -93,7 +93,7 @@
                                             </p>
                                         </div>
                                         {% if comment.name == request.user.username %}
-                                        <div class="col-md-2">
+                                        <div class="col-12 col-md-4">
                                             <a class="btn fw-bold blue-to-yel-btn rounded-0 mr-3"
                                                 href="{% url 'edit_comment' post.slug comment.pk %}">Edit</a>
                                             <a class="btn fw-bold blue-to-yel-btn rounded-0"
