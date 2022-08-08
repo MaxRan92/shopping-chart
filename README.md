@@ -100,3 +100,46 @@ Via collecting user emails, Shopping Chart plans to send out a weekly newsletter
 ### Paid Web Marketing
 
 To boost the SEO ranking and marketing, Shopping Chart plans to also include Paid Web Marketing in the marketing strategy. The main search engine to rank and to target is Google Search, for that reason, we will focus on planning advertising campaigns on Google Search Ads. The strategy will include creating ad campaigns on the defined keywords and to target a certain demographic that fits our users and to start within a geographical area.
+
+
+## Scope and AGILE method
+
+The Scope of the site is broadly encompassed in the follwing main tasks:
+
+1. Create an Ecommerce Website App to allow users to purchase trading algorithm
+2. Create an educational platform for the community to increase education and encourage members to purchase more strategies
+
+### **1 - Ecommerce Website App - User Story Mapping:**
+
+### *As a site user I can:*
+- View a list of algorithms so that I can sort and select the one I am interested in by rating, price, category.
+- Select an algorithm category in the navbar so that I can filter them and see the ones I am interested in
+- Insert a keyword in the search bar so that I can retrieve all the Algorithms that contain that word in their name or in their description
+- Select an Algorithm so that I can view details in its page: price per month, return, volatility, rating and description.
+- Add and delete products in the shopping bag for the chosen license period, so that I select what products I want to purchase
+- Insert my address payment information, check out and proceed with the payment
+- Receive an email confirmation after checking out so that I can have a record of the purchase on my e-mail and receive the link to retrieve the algorithm code
+- Receive notifications for relevant actions so that I can receive feedbacks and reinforce what I am doing
+- Register in the site so that I can create a personal account
+- Login/Logout so that I can enter in my personal account
+- Access a personal user profile so that I can view my order history and confirmations, as well as save my payment information
+- Sign on a newsletter so that I can be updated about the latest products and deals
+
+### *As a site owner I can:*
+- Create, Read, Update and Delete Algorithms from the site so that I can manage the algorithm list easily, without using the Django Admin. By inserting keywords and description, I can also actively manage the SEO Strategy.
+
+
+### **2 - Educational Platform - User Story Mapping:**
+
+### *As a site user I can:*
+- Read a glossary so that I can get educated regarding industry terminology
+- Read the site's blog so that I can be informed regarding relevant industry themes.
+- Read all user ratings and comments and Create, Read, Update or Delete my own rating and comments so that I can express my opinion and see what the community says.
+
+### *As a site owner I can:*
+- Create, Read, Update and Delete glossary terms from the site so that I can manage the terms list easily.
+- Create, Read, Update and Delete blog posts via django admin so that I can keep the blog updated.
+
+
+
+To deliver the scope of the project, an Agile approach to Software Development has been pursued for the project implementation. The tool used for this purpose is the **Github Kanban board** functionality, managing the life cycle of the issues from *To Do's* to *in progress* and eventually *Done*. 
