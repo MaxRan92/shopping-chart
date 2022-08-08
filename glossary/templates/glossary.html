@@ -9,6 +9,13 @@
 </div>
 {% endblock %}
 
+{% block extra_meta %}
+<meta name="title" content="Shopping Chart | Algorithmic Trading Glossary">
+<meta name="description"
+    content="Learn the Algorithmic Trading languages. Level up your algo trading with Shopping Chart!">
+<meta name="keywords" content="algorithmic trading glossary, trading terms, shopping chart glossary">
+{% endblock %}
+
 {% block content %}
 <div class="background-3">
     {% if user.is_superuser %}
@@ -20,33 +27,31 @@
             <form method="post" class="text-white">
                 {{ form | crispy }}
                 {% csrf_token %}
-                <button type="submit"
-                    class="btn blue-to-yel-btn btn-lg btn-post-comment fw-bold">Submit</button>
+                <button type="submit" class="btn blue-to-yel-btn btn-lg btn-post-comment fw-bold">Submit</button>
             </form>
         </div>
     </div>
     {% endif %}
-    
+
     <h2 class="logo-font text-center py-3">Glossary</h2>
     <div class="container h-100">
-            <hr class="grey-line">
-            {% for term in terms %}
-            <div class="row text-white mb-3 py-3">
-                <div class="col-4 col-md-2 text-right font-weight-bold">{{ term.term }}</div>
-                <div class="col-8 col-md-8">{{ term.description }}</div>
-                {% if user.is_superuser %}
-                    <div class="col-4 col-md-1 text-center mt-3">
-                        <a class="btn btn-submit btn-edit blue-to-yel-btn fw-bold"
-                            href="{% url 'edit_term' term.pk %}">Edit</a>
-                    </div>
-                    <div class="col-8 col-md-1 text-center mt-3">
-                        <a class="btn btn-submit blue-to-yel-btn btn-delete fw-boldr"
-                            href="{% url 'delete_term' term.pk %}">Delete</a>
-                    </div>
-                {% endif %}
+        <hr class="grey-line">
+        {% for term in terms %}
+        <div class="row text-white mb-3 py-3">
+            <div class="col-4 col-md-2 text-right font-weight-bold">{{ term.term }}</div>
+            <div class="col-8 col-md-8">{{ term.description }}</div>
+            {% if user.is_superuser %}
+            <div class="col-4 col-md-1 text-center mt-3">
+                <a class="btn btn-submit btn-edit blue-to-yel-btn fw-bold" href="{% url 'edit_term' term.pk %}">Edit</a>
             </div>
-            <hr class="grey-line">
-            {% endfor %}
+            <div class="col-8 col-md-1 text-center mt-3">
+                <a class="btn btn-submit blue-to-yel-btn btn-delete fw-boldr"
+                    href="{% url 'delete_term' term.pk %}">Delete</a>
+            </div>
+            {% endif %}
+        </div>
+        <hr class="grey-line">
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
