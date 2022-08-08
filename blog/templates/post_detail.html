@@ -9,6 +9,12 @@
 </div>
 {% endblock %}
 
+{% block extra_meta %}
+<meta name="title" content="{{ post.title }}">
+<meta name="description" content="{{ post.excerpt }}">
+<meta name="keywords" content="algorithmic trading strategy, algorithmic trading benefit, crypto trading, crypto trends">
+{% endblock %}
+
 {% block content %}
 <div class="background-1">
     <div class="overlay"></div>
