@@ -26,33 +26,33 @@
             </div>
         </div>
         <div class="row">
-            <div class="col col-lg-6 order-lg-last mb-5 text-white">
+            <div class="col-12 col-lg-6 order-lg-last mb-5 text-white">
                 <p>Order Summary ({{ algo_count }})</p>
                 <div class="row">
-                    <div class="col-7 offset-2">
+                    <div class="col-lg-7 offset-2">
                         <p class="mb-1 mt-0 small">Item</p>
                     </div>
-                    <div class="col-3 text-right">
+                    <div class="col-lg-3 text-right">
                         <p class="mb-1 mt-0 small">Subtotal</p>
                     </div>
                 </div>
                 {% for item in bag_items %}
                 <div class="row">
-                    <div class="col-2 mb-1">
+                    <div class="d-none d-md-block col-md-2 mb-1">
                         <a href="{% url 'algo_detail' item.algo.id %}">
                             {% if item.algo.image %}
-                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ algo.name }}">
+                            <img class="w-100" src="{{ item.algo.image.url }}" alt="{{ algo.name }}">
                             {% else %}
                             <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ algo.name }}">
                             {% endif %}
                         </a>
                     </div>
-                    <div class="col-7">
+                    <div class="col-9 col-md-7">
                         <p class="my-0"><strong>{{ item.algo.name }}</strong></p>
                         <p class="my-0 small text-white">Qty: {{ item.license_period }}</p>
                     </div>
-                    <div class="col-3 text-right">
-                        <p class="my-0 small text-white">${{ item.algo.price | calc_subtotal:item.license_period }}</p>
+                    <div class="col-3 col-md-3">
+                        <p class="my-0 small text-white text-right">${{ item.algo.price | calc_subtotal:item.license_period }}</p>
                     </div>
                 </div>
                 {% endfor %}
@@ -70,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col col-lg-6">
+            <div class="col-12 col-lg-6">
                 <p class="text-white">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
@@ -119,7 +119,7 @@
                             <span class="font-weight-bold">Adjust Bag</span>
                         </a>
                         <button id="submit-button" class="btn blue-to-yel-btn rounded-0">
-                            <span class="font-weight-bold">Complete Order</span>
+                            <span class="font-weight-bold">Submit Order</span>
                             <span class="icon">
                                 <i class="fas fa-lock"></i>
                             </span>
