@@ -16,7 +16,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="background-1">
+<div class="background-1 pt-5">
     <div class="overlay"></div>
     <!-- Page content-->
     <div class="container">
@@ -42,9 +42,9 @@
                     </div>
                     <!-- Post content-->
                     <div class="bg-light mb-4">
-                        <section class="p-3">
-                            <p class="fs-5 my-3">{{ post.content | safe }}</p>
-                        </section>
+                        <div class="p-3">
+                            <div class="fs-5 my-3">{{ post.content | safe }}</div>
+                        </div>
                     </div>
                 </article>
             </div>
