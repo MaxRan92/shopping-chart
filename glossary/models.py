@@ -1,7 +1,4 @@
 from django.db import models
-from algos.models import Category
-
-# Create your models here.
 
 
 class Terms(models.Model):
@@ -11,7 +8,7 @@ class Terms(models.Model):
 
     class Meta:
         verbose_name_plural = 'Terms'
-        ordering = ['term'] 
+        ordering = ['term']
 
     def __str__(self):
         return self.term

@@ -4,6 +4,7 @@ Django forms
 from django import forms
 from .models import Terms
 
+
 class TermForm(forms.ModelForm):
     '''
     Form to add a comment
@@ -17,6 +18,7 @@ class TermForm(forms.ModelForm):
         labels = {
             "description": "Insert description",
         }
+
 
 class EditForm(forms.ModelForm):
     '''

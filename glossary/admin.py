@@ -5,4 +5,4 @@ from .models import Terms
 @admin.register(Terms)
 class TermsAdmin(admin.ModelAdmin):
     list_display = ('term', 'description',)
-    search_fields = ['term',]
+    search_fields = ['term', ]

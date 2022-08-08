@@ -8,15 +8,10 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 
 
-
-# Create your views here.
-
-
 def view_glossary(request):
     """
     A view to return the glossary page
     """
-
     terms = Terms.objects.all()
     form = TermForm(request.POST or None)
 
@@ -37,7 +32,7 @@ def view_glossary(request):
         'terms': terms,
         'form': form,
     }
-    
+
     return render(request, 'glossary.html', context)
 
 
@@ -49,7 +44,6 @@ class TermDelete(DeleteView):
     """
     model = Terms
     template_name = "delete_term.html"
-
 
     def delete(self, request, *args, **kwargs):
 
