@@ -82,6 +82,18 @@ a:hover {
     color: white !important;
 }
 
+.yel-to-blue-btn {
+    background: #FF9000 !important;
+    color: #000000 !important;
+}
+
+.yel-to-blue-btn:hover,
+.yel-to-blue-btn:active,
+.yel-to-blue-btn:focus {
+    background: #067bc2 !important;
+    color: white !important;
+}
+
 .explore-now-btn {
     min-width: 260px;
 }

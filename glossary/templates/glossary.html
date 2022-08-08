@@ -26,7 +26,7 @@
             <form method="post" class="text-white">
                 {{ form | crispy }}
                 {% csrf_token %}
-                <button type="submit" class="btn blue-to-yel-btn btn-lg btn-post-comment fw-bold">Submit</button>
+                <button type="submit" class="btn blue-to-yel-btn btn-lg btn-post-comment fw-bold rounded-0">Submit</button>
             </form>
         </div>
     </div>
@@ -41,10 +41,10 @@
             <div class="col-8 col-md-8">{{ term.description }}</div>
             {% if user.is_superuser %}
             <div class="col-4 col-md-1 text-center mt-3">
-                <a class="btn btn-submit btn-edit blue-to-yel-btn fw-bold" href="{% url 'edit_term' term.pk %}">Edit</a>
+                <a class="btn btn-submit btn-edit blue-to-yel-btn fw-bold rounded-0" href="{% url 'edit_term' term.pk %}">Edit</a>
             </div>
             <div class="col-8 col-md-1 text-center mt-3">
-                <a class="btn btn-submit blue-to-yel-btn btn-delete fw-boldr"
+                <a class="btn btn-submit yel-to-blue-btn btn-delete fw-bold rounded-0"
                     href="{% url 'delete_term' term.pk %}">Delete</a>
             </div>
             {% endif %}
