@@ -2,26 +2,53 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
+{% endblock %}
+
+{% block extra_meta %}
+<meta name="title" content="Shopping Chart | Best Algorithmic Trading Strategies">
+<meta name="description" content="Access a library of ready-to-deploy algo trading strategies. Built and tested by a team of expert algo traders to provide you with an edge in the financial market.">
+<meta name="keywords" content="algorithmic trading strategies, best strategies for algo traders, Shopping Chart trading algorithm, buy automated trading algorithm">
 {% endblock %}
 
 {% block content %}
-    <div class="home-banner">
+<div class="home-banner container-fluid">
     <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font">Algorithmic Trading for everyone!</h1>
+        <div class="row">
+            <div class="col-7 col-md-6 my-5">
+                <h1 class="display-4 logo-font">Best Algorithmic Trading Strategies</h1>
+                <h2 class="text-white home-subtitle">Ready to deploy in minutes, trusted by algo traders around the
+                    world!</h2>
                 <div>
-                    <h4 class="my-5">
-                        <a href="{% url 'algos' %}" class="explore-now-btn blue-to-yel-btn btn btn-lg rounded-0 text-uppercase py-3">Explore now</a>
+                    <h4 class="mb-5">
+                        <a href="{% url 'algos' %}"
+                            class="explore-now-btn blue-to-yel-btn btn btn-lg rounded-0 text-uppercase py-3">Explore
+                            now</a>
                     </h4>
                 </div>
             </div>
         </div>
+        <div class="row pb-2">
+            <div class="col-12 col-md-6 card my-auto p-2 p-md-3">
+                <h2 class="text-white home-subtitle">Trading Made Simple</h2>
+                <p class="text-white p-3">
+                    Shopping Chart is a commercial platform that provides you with access to a library of
+                    ready-to-deploy
+                    algo trading strategies. These algorithmic trading strategies have been built and tested by a team
+                    of
+                    experienced algo traders and are designed to provide you with an edge in the financial market. Our
+                    mission at Shopping Chart is to make algorithmic trading available and profitable for everyone.
+
+                    Shopping Chart is constantly adding new strategies to its library, making it an essential resource
+                    for
+                    your journey in algo trading. You can now trade like a pro!
+                </p>
+            </div>
+        </div>
     </div>
-    </div>
+</div>
 {% endblock %}
