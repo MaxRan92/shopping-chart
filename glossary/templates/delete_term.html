@@ -12,18 +12,18 @@
 {% block content %}
 <div class="background-3">
 <div class="container">
-    <div class="card-container my-5 w-50 m-auto">
+    <div class="card-container my-5 w-100 m-auto">
         <div class="element-card text-white">
             <div class="col-12">
             <!--Prompt the user for confirmation when deleting review entry-->
             <form method="POST" action=".">
                 {% csrf_token %}
-                <h3 class="fw-bold fs-3">Are you sure you want to delete the term?</h3>
-                <div class="text-center">
-                    <input class="btn blue-to-yel-btn btn-post-comment my-3 w-25" type="submit" value="Yes" /> 
-                </div>
-                <div class="text-center">
-                    <a class="btn blue-to-yel-btn btn-post-comment my-3 w-25" href="/glossary/">Back to the glossary</a>
+                <h3 class="fw-bold fs-3 text-center py-5">Are you sure you want to delete the term?</h3>
+                <div class="row">
+                    <div class="col-6 col-md-2 m-auto">
+                        <a class="btn blue-to-yel-btn btn-post-comment rounded-0" href="/glossary/">Back</a>
+                        <input class="btn blue-to-yel-btn btn-post-comment rounded-0" type="submit" value="Yes" />
+                    </div>                
                 </div>
             </form>
             </div>

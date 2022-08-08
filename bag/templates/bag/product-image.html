@@ -1,0 +1,5 @@
+{% if item.algo.image %}
+<img src="{{ item.algo.image.url }}" alt="algorithm image" class="img-fluid rounded">
+{% else %}
+<img class="card-img-top img-fluid" src="/media/noimage.png" alt="{{ algo.name }}">
+{% endif %}

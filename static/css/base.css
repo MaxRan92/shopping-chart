@@ -507,6 +507,11 @@ a.category-badge > span.badge:hover {
         height: 36px;
     }
 
+    .btn.blue-to-yel-btn.rounded-0.increment-license-period,
+    .btn.blue-to-yel-btn.rounded-0.decrement-license-period {
+        width: 36px;
+    }
+
     .license-period-input {
         height: 36px;
     }
