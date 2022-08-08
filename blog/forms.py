@@ -4,6 +4,7 @@ Django forms
 from django import forms
 from .models import Comment
 
+
 class CommentForm(forms.ModelForm):
     '''
     Form to add a comment
@@ -17,6 +18,7 @@ class CommentForm(forms.ModelForm):
         labels = {
             "body": "Share your idea on this post",
         }
+
 
 class EditForm(forms.ModelForm):
     '''

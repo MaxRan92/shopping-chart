@@ -2,14 +2,13 @@ from django.shortcuts import render, get_object_or_404
 from .models import Post, Comment
 from django.contrib import messages
 from shopping_chart.settings import MEDIA_URL
-from django.views import generic, View
+from django.views import View
 from django.views.generic import DeleteView, UpdateView
 from django.http import HttpResponseRedirect
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from .forms import CommentForm, EditForm
-
 
 
 def view_blog(request):
@@ -37,12 +36,12 @@ class PostDetail(View):
         comments = post.comments.order_by('-created_on')
 
         if self.comment_deleted:
-            messages.success(request, f'Your comment has been deleted!')
+            messages.success(request, 'Your comment has been deleted!')
             PostDetail.comment_deleted = False
         elif self.comment_edited:
-            messages.success(request, f'Your comment has been updated!')
+            messages.success(request, 'Your comment has been updated!')
             PostDetail.comment_edited = False
-                   
+
         return render(
             request,
             "post_detail.html",
@@ -53,7 +52,6 @@ class PostDetail(View):
                 "blog_message": True,
             },
         )
-
 
     def post(self, request, slug):
         """
@@ -71,11 +69,10 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            messages.success(request, f'Your comment has been posted!')
+            messages.success(request, 'Your comment has been posted!')
         else:
             comment_form = CommentForm()
-        
-        
+
         return render(
             request,
             "post_detail.html",
@@ -86,6 +83,7 @@ class PostDetail(View):
                 "comment_form": CommentForm,
             },
         )
+
 
 @method_decorator(login_required, name="dispatch")
 class CommentDelete(DeleteView):
@@ -103,7 +101,6 @@ class CommentDelete(DeleteView):
     def get_success_url(self, *args, **kwargs):
         PostDetail.comment_deleted = True
         return reverse("post_detail", kwargs={"slug": self.object.post.slug})
-
 
 
 @method_decorator(login_required, name="dispatch")
