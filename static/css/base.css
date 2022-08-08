@@ -273,7 +273,7 @@ a.category-badge > span.badge {
 
 a.category-badge > span.badge:hover {
     background: #FF9000 !important;
-    color: #black !important;
+    color: black !important;
 }
 
 
