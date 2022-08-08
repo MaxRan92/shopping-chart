@@ -15,7 +15,7 @@ def view_blog(request):
     """
     A view to return the blog page
     """
-    posts = Post.objects.all()
+    posts = Post.objects.filter(status=1).order_by('-created_on')
 
     context = {
         'posts': posts,
