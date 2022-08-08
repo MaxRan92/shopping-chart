@@ -11,10 +11,29 @@
 </div>
 {% endblock %}
 
+{% block extra_meta %}
+<meta name="title" content="Shopping Chart | Algorithmic Trading Blog and Updates">
+<meta name="description" content="Get the latest updates, tips, and learnings on Algorithmic Trading and the strategies. Become the expert algo trader with Shopping Chart!">
+<meta name="keywords" content="algorithmic trading blog, algo trading strategies, trading algorithm updates, Shopping Chart news">
+{% endblock %}
+
+
 {% block content %}
 <div class="background-3">
     <div class="container h-100">
-        <div class="row py-5 h-100">
+        <div class="row py-3 h-100">
+            <div class="col-12 col-md-6 m-auto p-2">
+                <div class="card h-100 border-0">
+                    <p class="text-white p-3">
+                        Get the latest updates about our top strategic algorithms directly from our best performing algo traders. By reading our blogs, 
+                        you will learn about the different types of algorithmic trading strategies, examples, and how to select the best strategy for 
+                        your trading goals. In addition, you will get insights into the latest trends in the markets and how algorithmic trading can 
+                        be used to trade them profitably.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row py-3 h-100">
             {% for post in posts %}
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card h-100 border-0">

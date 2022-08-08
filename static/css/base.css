@@ -209,6 +209,14 @@ footer p {
     height: 110px;
 }
 
+/* Newsletter */
+
+.newsletter {
+    border-bottom: #313135;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #0A0A0A;
+}
 
 /* Blog Posts */
 .blog-btn {
