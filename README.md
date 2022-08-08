@@ -29,7 +29,7 @@ As part of the Ecommerce strategy, Users also have the ability to browse the sit
 
 ### 1.2 Marketing Strategy:
 
-Shopping Chart marketing strategy includes Search Engine Optimisation, Content Marketing, Email Marketing, Social Media Marketing and Paid Web Marketing
+Shopping Chart marketing strategy includes Search Engine Optimisation, Content Marketing, Email Marketing, Social Media Marketing and Paid Web Marketing.
 
 ### Search Engine Optimization
 
@@ -90,9 +90,13 @@ As part of the “building trust” marketing approach, an official Facebook bus
 Other than Facebook, Shopping Chart is planned to have a Twitter account. Twitter is proven to be the most favorite platform for updates among traders. Shopping Chart Twitter account will focus more on announcing interesting remarks of stocks and related news or updates. 
 
 
-### Social Media Marketing
+### Email Marketing
 
 Email marketing is one of the must-have tools for all e-commerce businesses. This marketing channel is believed to be the most effective as all users must have an email address, and we can reach out to them easily using emails. As part of the Shopping Chart marketing strategy, we have included an email newsletter sign up form in the footer section, completed with GDPR consent, for users to opt-in in receiving news or updates from Shopping Chart.
 
 Via collecting user emails, Shopping Chart plans to send out a weekly newsletter with market updates and special offers only for newsletter subscribers. On top of that, Shopping Chart will set up an automated email to upsell customers some time after their purchases to check out similar trading algorithms that may interest them.
 
+
+### Paid Web Marketing
+
+To boost the SEO ranking and marketing, Shopping Chart plans to also include Paid Web Marketing in the marketing strategy. The main search engine to rank and to target is Google Search, for that reason, we will focus on planning advertising campaigns on Google Search Ads. The strategy will include creating ad campaigns on the defined keywords and to target a certain demographic that fits our users and to start within a geographical area.
