@@ -216,6 +216,11 @@ footer p {
     bottom: 0;
 }
 
+.card-text {
+    color: white;
+    font-size: 14px;
+}
+
 /* Algo card styling */
 .card,
 .card-img-top {
