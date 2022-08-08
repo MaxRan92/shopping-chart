@@ -35,9 +35,9 @@
                     <!-- Preview image figure-->
                     <div class="mb-2 image-container">
                         {% if post.featured_image %}
-                        <img class="img-fluid rounded" src="{{ post.featured_image.url }}" alt="{{ post.name }}">
+                        <img class="img-fluid rounded" src="{{ post.featured_image.url }}" alt="{{ post.title }} image">
                         {% else %}
-                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.name }}">
+                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }} image">
                         {% endif %}
                     </div>
                     <!-- Post content-->

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /bag/
+Disallow: /accounts/
+Sitemap: https://mr-shopping-chart.herokuapp.com/sitemap.xml
