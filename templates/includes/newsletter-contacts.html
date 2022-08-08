@@ -1,12 +1,12 @@
 <section class="d-flex justify-content-center justify-content-lg-around p-4 newsletter">
     <div class="row">
-        <div class="col-4 d-none d-lg-block text-center">
+        <div class="col-12 col-lg-4 d-none d-lg-block text-center">
             <h6 class="mr-5 text-white">
                 <span>Subscribe to our Newsletter to stay updated about our latest offers:</span>
             </h6>
         </div>
 
-        <div class="text-white col-12 col-md-4 text-center">
+        <div class="text-white col-12 col-lg-4 text-center">
             <form action="{% url 'home' %}" method="POST">
                 {% csrf_token %}
                 <div class="form-group">
@@ -25,6 +25,8 @@
                         <label for="id_privacy" class="form-check-label text-white requiredField">
                             GDPR Consent<span class="asteriskField">*</span>
                         </label>
+                        <br>
+                        <a href="https://www.privacypolicygenerator.info/live.php?token=7OTBICcBTMd8yHHw8LvQuImAOaTKvynH">Check our Privacy Policy</a>
                     </div>
                 </div>
                 <button type="submit" class="blue-to-yel-btn rounded-0 btn">Subscribe</button>
@@ -32,9 +34,9 @@
 
         </div>
 
-        <div class="text-white col-12 col-md-4 text-center mt-5 mt-md-0">
+        <div class="text-white col-12 col-lg-4 text-center mt-5 mt-lg-0">
             <h3>Contacts</h3>
-            <p>Shopping Chart Ltd<br>2nd Main Street<br>New York<br>+1 000 000 000<br> shopping-chart@mail.com</p>
+            <p>Shopping Chart Ltd<br>Via Roma<br>Milano, Italy<br>+39 000 000 000<br> shopping-chart@mail.com</p>
         </div>
     </div>
 </section>
