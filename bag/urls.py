@@ -1,3 +1,7 @@
+"""
+Credits: the code is inspired and adapted from the
+Code Institute Boutique Ado Project
+"""
 from django.urls import path
 from . import views
 
