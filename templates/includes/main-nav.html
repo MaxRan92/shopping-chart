@@ -6,10 +6,10 @@
             </a>
         </li>
         <li class="nav-item dropdown my-auto">
-            <a class="logo-font font-weight-bold mr-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold mr-5" href="#" data-toggle="dropdown" id="algorithm-link" aria-haspopup="true" aria-expanded="false">
                 All Algorithms
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border-0" aria-labelledby="algorithm-link">
                 <a href="{% url 'algos' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'algos' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'algos' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
@@ -18,10 +18,10 @@
         </li>
 
         <li class="nav-item dropdown my-auto">
-            <a class="logo-font font-weight-bold mr-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold mr-5" href="#" data-toggle="dropdown" id="stock-link" aria-haspopup="true" aria-expanded="false">
                 Stocks
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+            <div class="dropdown-menu border-0" aria-labelledby="stock-link">
                 <a href="{% url 'algos' %}?category=long_only" class="dropdown-item">Long Only</a>
                 <a href="{% url 'algos' %}?category=long_short" class="dropdown-item">Long Short</a>
                 <a href="{% url 'algos' %}?category=dividend" class="dropdown-item">Dividend</a>
@@ -30,10 +30,10 @@
         </li>
 
         <li class="nav-item dropdown my-auto">
-            <a class="logo-font font-weight-bold mr-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold mr-5" href="#" data-toggle="dropdown" id="fixed-income-link" aria-haspopup="true" aria-expanded="false">
                 Fixed Income
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+            <div class="dropdown-menu border-0" aria-labelledby="fixed-income-link">
                 <a href="{% url 'algos' %}?category=income" class="dropdown-item">Income</a>
                 <a href="{% url 'algos' %}?category=relative_value" class="dropdown-item">Relative Value</a>
                 <a href="{% url 'algos' %}?category=capital_gain" class="dropdown-item">Capital Gain</a>
@@ -42,10 +42,10 @@
         </li>
 
         <li class="nav-item dropdown my-auto">
-            <a class="logo-font font-weight-bold mr-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold mr-5" href="#" data-toggle="dropdown" id="crypto-fx-link" aria-haspopup="true" aria-expanded="false">
                 Crypto &amp; Forex
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
+            <div class="dropdown-menu border-0" aria-labelledby="crypto-fx-link">
                 <a href="{% url 'algos' %}?category=crypto_long_short" class="dropdown-item">Crypto Long-Short</a>
                 <a href="{% url 'algos' %}?category=forex_long_short" class="dropdown-item">Forex Long-Short</a>
                 <a href="{% url 'algos' %}?category=crypto_long_short,forex_long_short" class="dropdown-item">All Crypto &amp; Forex Algorithms</a>
