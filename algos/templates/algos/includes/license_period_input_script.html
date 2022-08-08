@@ -5,6 +5,11 @@
         var plusDisabled = currentValue > 98;
         $(`#decrement-license-period_${itemId}`).prop('disabled', minusDisabled);
         $(`#increment-license-period_${itemId}`).prop('disables', plusDisabled);
+        var currentValue2 = parseInt($(`#m_id_license_period_${itemId}`).val());
+        var minusDisabled2 = currentValue2 < 2;
+        var plusDisabled2 = currentValue2 > 98;
+        $(`#m-decrement-license-period_${itemId}`).prop('disabled', minusDisabled2);
+        $(`#m-increment-license-period_${itemId}`).prop('disables', plusDisabled2);
     }
 
     // Ensure proper enabling/disabling of all inputs on page load
