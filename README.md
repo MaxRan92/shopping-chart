@@ -194,3 +194,100 @@ Below are presented the wireframes created during the site project planning, whi
 - Wireframe 6 - Glossary
 
 ![Glossary](readme/images/glossary-wireframe.png)
+
+
+## Design
+
+The website was designed using the Bootstrap framework in order to create a fully responsive site.
+
+### Colour palette
+
+The color used are mainly yellow, blue and black and create a high contrast in the page: a must in the Fintech design adopted by several competitors.
+
+![Colour-palette](readme/images/colour-palette.png)
+
+### Images
+
+Most of the images were modified via Adobe Photoshop to increase their quality, contrast or meaning, and are all sourced from [Pexels](http://www.pexels.com)
+
+Several images are added in the site, increasing the tech flavour that the user experiences navigating the pages.
+
+Moreover, how can one represent a list of algorithm via images? The choice was to create a template image that adapts to the algorithm main category, subcategory and strategy. Changing colours and wording the risk of repetitive cards is mitigated.
+
+![Product images](readme/images/product-images.png)
+
+
+
+### Icons
+
+The Icons used are created with the help of the following sites:
+- [fontawesome](https://fontawesome.com/start)
+- [favicon](https://www.favicon.io/) 
+
+
+## Features
+
+* ### Home Page and Navigation Bar:
+The navigation bar is intuitive: users can always return to the algorithm list, which shows the list of all the algorithms. Moreover, users can filter the algorithm by category, visit the blog, the glossary, log in, register or log out.
+In the homepage, the user is called to action in order to explore more of the products offered.
+
+![homepage](readme/images/homepage.png)
+
+
+* ### Algorithm List:
+
+The Algorithm List page contains a list of all of the algorithms available on the site, together with options for sorting by price, category, name and rating. The page will also display a count of the displayed products, and will have a search bar at the top of the page.
+
+![algo-list](readme/images/algo-list.png)
+
+
+* ### Algorithm Detail:
+
+The algorithm detail page is reached by clicking on the image of any of the algorithm cards in the listr. The user will retrieve the most important information about the produtct, such as name, license price per month, rating, description, total return and volatility. With buttons the user can specify how many months of licensing he wants to purchase and add it to the shopping bag.
+
+If the user is a superuser, from this page he can access links to update or delete the algorithm
+
+![algo-detail](readme/images/algo-detail.png)
+
+
+* ### Shopping Bag
+
+In the shopping bag, the user can see all the purchased products and adjust the license period / remove them. 
+
+![shopping-bag](readme/images/shopping-bag.png)
+
+
+* ### Checkout page
+
+By clicking "Secure Checkout" in the shopping bag, the user goes in the checkout page in which he can insert the delivery information and the credit card number to be debited. If registered, the user can also save his delivery information for future purchases.
+
+![checkout](readme/images/checkout.png)
+
+
+* ### Order confirmation
+
+Once the checkout is completed and the user submits the order, he will be redirected to an order confirmation screen showing a record of his order in detail, with  order number, delivery address, the product details, the delivery address and other relevan information. A call to action button will ask them to continue shopping in the site.
+
+![order-confirmation](readme/images/order-confirmation.png)
+
+
+When the user successfully submit the order, he will also receive a confirmation email on the provided address with an order recap and the link to access the algorithm code.
+
+![email-confirmation](readme/images/email-confirmation.png)
+
+
+
+* ### Add/Delete a product
+
+The site Admin can always delete or add/modify a new product via its algorithm management page, accessible under the My Account tab. This feature is essential for product inventory management and SEO optimization via description and keywords.
+
+To delete it, it will be sufficient to press the button Delete which will appear to the Admin if he is in the algorithm list or in the algorithm details page.
+
+![algo-admin](readme/images/algo-admin.png)
+
+
+* ### User Authentication & Profile Page
+
+As anticipated, a user can register, log-in or sign-out via proper and standard allauth forms. He can also access his profile page, in which he can update his delivery information and view his order history.
+
+![profile-page](readme/images/user-profile.png)
