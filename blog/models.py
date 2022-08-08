@@ -4,6 +4,13 @@ from django.contrib.auth.models import User
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+RATING = (
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5)
+)
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -38,6 +45,7 @@ class Comment(models.Model):
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
+    user_rating = models.IntegerField(choices=RATING, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:

@@ -22,6 +22,6 @@ class CommentAdmin(admin.ModelAdmin):
     functionalities
     '''
     list_display = ('name', 'body', 'post',
-                    'created_on',)
+                    'created_on', 'user_rating',)
     list_filter = ('created_on',)
     search_fields = ('name', 'email', 'body')
