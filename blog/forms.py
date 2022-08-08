@@ -17,6 +17,7 @@ class CommentForm(forms.ModelForm):
         fields = ('body', 'user_rating', )
         labels = {
             "body": "Share your idea on this post",
+            "user_rating": "Give a rating to the post",
         }
 
 
@@ -32,4 +33,5 @@ class EditForm(forms.ModelForm):
         fields = ('body', 'user_rating', )
         labels = {
             "body": "Change the comment and click post to submit",
+            "user_rating": "Change the rating given to the post"
         }

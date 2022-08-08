@@ -129,7 +129,8 @@ a:hover {
     z-index: -1;
 }
 
-#id_body {
+#id_body,
+#id_user_rating {
     background-color: white !important;
     color: #000 !important;
 }

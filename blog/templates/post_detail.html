@@ -64,8 +64,14 @@
                                 {% for comment in comments %}
                                 <div class="comments">
                                     <!-- Body of the comment -->
-                                    {{ comment.body | linebreaksbr }}
-                                    {{ comment.user_rating }}
+                                    Comment: {{ comment.body | linebreaksbr }}
+                                    <div class="row">
+                                        <div class="col-md-8 post-name-time">
+                                            <p class="fw-bold">
+                                                Rating: {{ comment.user_rating }}
+                                            </p>
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-md-8 post-name-time">
                                             <p class="fw-bold">
@@ -77,11 +83,9 @@
                                         </div>
                                         {% if comment.name == request.user.username %}
                                         <div class="col-md-2">
-                                            <a class="btn btn-submit btn-edit fw-bold"
+                                            <a class="btn fw-bold blue-to-yel-btn rounded-0 mr-3"
                                                 href="{% url 'edit_comment' post.slug comment.pk %}">Edit</a>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <a class="btn btn-submit btn-delete fw-bold"
+                                            <a class="btn fw-bold blue-to-yel-btn rounded-0"
                                                 href="{% url 'delete_comment' post.slug comment.pk %}">Delete</a>
                                         </div>
                                         {% endif %}
