@@ -12,7 +12,8 @@
 {% block extra_meta %}
 <meta name="title" content="{{ post.title }}">
 <meta name="description" content="{{ post.excerpt }}">
-<meta name="keywords" content="algorithmic trading strategy, algorithmic trading benefit, crypto trading, crypto trends">
+<meta name="keywords"
+    content="algorithmic trading strategy, algorithmic trading benefit, crypto trading, crypto trends">
 {% endblock %}
 
 {% block content %}
@@ -68,7 +69,17 @@
                                     <div class="row">
                                         <div class="col-md-8 post-name-time">
                                             <p class="fw-bold">
-                                                Rating: {{ comment.user_rating }}
+                                                Rating:
+                                                <span
+                                                    class="fa{% if comment.user_rating > 0 %}s{% else %}r{% endif %} fa-star"></span>
+                                                <span
+                                                    class="fa{% if comment.user_rating > 1 %}s{% else %}r{% endif %} fa-star"></span>
+                                                <span
+                                                    class="fa{% if comment.user_rating > 2 %}s{% else %}r{% endif %} fa-star"></span>
+                                                <span
+                                                    class="fa{% if comment.user_rating > 3 %}s{% else %}r{% endif %} fa-star"></span>
+                                                <span
+                                                    class="fa{% if comment.user_rating > 4 %}s{% else %}r{% endif %} fa-star"></span>
                                             </p>
                                         </div>
                                     </div>
@@ -116,7 +127,7 @@
                                 {{ comment_form | crispy }}
                                 {% csrf_token %}
                                 <button type="submit"
-                                    class="btn blue-to-yel-btn btn-lg btn-post-comment fw-bold">Submit</button>
+                                    class="btn blue-to-yel-btn btn-lg btn-post-comment fw-bold rounded-0">Submit</button>
                             </form>
                         </div>
                         {% endif %}
