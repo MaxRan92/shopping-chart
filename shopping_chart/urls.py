@@ -33,4 +33,4 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 HANDLER404 = 'shopping_chart.views.handler404'
-
+HANDLER500 = 'shopping_chart.views.handler500'
