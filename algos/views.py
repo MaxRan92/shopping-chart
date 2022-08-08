@@ -1,3 +1,7 @@
+"""
+Credits: the code is inspired and adapted from the
+Code Institute Boutique Ado Project
+"""
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
@@ -7,7 +11,6 @@ from django.db.models.functions import Lower
 from shopping_chart.settings import MEDIA_URL
 from .forms import AlgoForm
 
-# Create your views here.
 
 def all_algos(request):
     """
@@ -44,10 +47,11 @@ def all_algos(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any serach criteria!")
+                messages.error(request, "You didn't enter any \
+                    serach criteria!")
                 return redirect(reverse('algos'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | \
+                Q(description__icontains=query)
             algos = algos.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -94,7 +98,8 @@ def add_algo(request):
             messages.success(request, 'Successfully added algorithm')
             return redirect(reverse('algo_detail', args=[algo.id]))
         else:
-            messages.error(request, 'Failed to add algorithm, please ensure the form is valid.')
+            messages.error(request, 'Failed to add algorithm, \
+                please ensure the form is valid.')
     else:
         form = AlgoForm()
 
@@ -121,7 +126,8 @@ def edit_algo(request, algo_id):
             messages.success(request, 'Successfully updated algorithm!')
             return redirect(reverse('algo_detail', args=[algo.id]))
         else:
-            messages.error(request, 'Failed to update algorithm. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update algorithm. \
+                Please ensure the form is valid.')
     else:
         form = AlgoForm(instance=algo)
         messages.info(request, f'You are editing {algo.name}')
@@ -141,7 +147,7 @@ def delete_algo(request, algo_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-        
+
     algo = get_object_or_404(Algo, pk=algo_id)
     algo.delete()
     messages.success(request, 'Algorithm deleted!')
