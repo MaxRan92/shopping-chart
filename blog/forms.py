@@ -14,7 +14,7 @@ class CommentForm(forms.ModelForm):
         Link for to model, set fields and labels
         """
         model = Comment
-        fields = ('body',)
+        fields = ('body', 'user_rating', )
         labels = {
             "body": "Share your idea on this post",
         }
@@ -29,7 +29,7 @@ class EditForm(forms.ModelForm):
         Link for to model, set fields and labels
         """
         model = Comment
-        fields = ('body',)
+        fields = ('body', 'user_rating', )
         labels = {
             "body": "Change the comment and click post to submit",
         }
