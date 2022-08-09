@@ -65,8 +65,8 @@ Beyond the internal links, the site includes links to external sites that have g
 The meta data (title, description, and keywords) for all pages and products have also been added to further support the search engine optimization as seen in the following screenshot.
 An useful feature regards the use of the descrption (showed also in the algorithm page) and the keywords (visible only to the admin), in the meta tags of the web pages. This allows more specific and easy to update SEO strategy.
 
-![Title](readme/images/SEO-screenshot1.png)
-![Title](readme/images/SEO-screenshot2.png)
+![Title](readme/images/seo-screenshot1.png)
+![Title](readme/images/seo-screenshot2.png)
 
 Furthermore, two important files to help with the SEO strategy have been added to the site, which are the sitemap.xml and the robots.txt. The sitemap file lists the site’s important page URL's, making sure that search engines are able to crawl them and understand the website structure. On the other hand, the robots.txt is a text file that tells search engines the prohibited pages where they are not allowed to go on our website - listing any folders or files that are not supposed to be crawled or indexed by search engines. Having these files is a foundational part of the whole SEO strategy and should help improve the site’s visibility and SEO ranking.
 
@@ -335,6 +335,8 @@ At the bottom of every page of the site, a banner asks user to submit their emai
 
 The tests below are part of the manual testing procedures employed to verify the correct functioning of the website features
 
+## Functionalities Testing
+
 **Authorisation & authentication Testing:**
 
 n | Test Case | Result | Pass/Fail 
@@ -403,3 +405,20 @@ n | Test Case | Result | Pass/Fail
 2 | Post Comment | The registered user writes a comment in the form, assigns a rating ad submit it successfully | pass
 3 | Edit Comment | The registered user can Edit only his own comments and ratings successfully | pass
 4 | Delete Comment | The registered user can Delete only his own comments and ratings | pass
+
+
+## Validation Testing
+
+### HTML
+All the pages passed successfully the [W3C](https://validator.w3.org/) HTML validation testing
+
+Below an example:
+![HTML Validator](readme/images/html-validator.png)
+
+### CSS
+All the CSS Code passed successfully the [Jigsaw-W3C](https://jigsaw.w3.org/css-validator/) HTML validation testing
+
+Below and example:
+![HTML Validator](readme/images/css-validator.png)
+
+
