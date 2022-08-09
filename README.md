@@ -499,7 +499,7 @@ To solve it, you can deploy via Gitpod terminal. To do so:
 
 2 - Amazon AWS
 <br>
-Shopping Chart uses Amazon AWS for data storage.
+Shopping Chart uses Amazon AWS for data storage of static and media files.
 1. Navigate in a browser to Amazon AWS, log in, or create an account and log in. 
 2. Create a new S3 bucket for the site and create a static directory and media directory within the bucket.
 3. From the dashboard - copy the bucket details into the settings file.
@@ -514,7 +514,7 @@ Shopping Chart uses Amazon AWS for data storage.
     - add os.environ["AWS_SECRET_ACCESS_KEY"] = "paste in your secret access key"
 
 
-  ## Credits
+## Credits
 
 ### Media Credits
 - Images for companies were found on: <a href="https://www.pexels.com/it-it"><strong>Pexels</strong></a> and adapted using Photoshop.
