@@ -446,6 +446,69 @@ Below an example both for desktop and mobile views:
 ![lighthouse Validator Mobile](readme/images/mobile-lighthouse-validator.png)
 
 
-* ### Cross Browser and Device Testing
-    - The site has been tested on multiple devices screen sizes with the proper Chrome emulator. All the elements of the pages are rendered properly and are fully responsive. The Bootstrap5 Grid System has been largely used in the HTML code, greatly facilitating the development of responsive pages.
-    - The website has been successfully tested on Safari, Chrome and Firefox.
+### Cross Browser and Device Testing
+- The site has been tested on multiple devices screen sizes with the proper Chrome emulator. All the elements of the pages are rendered properly and are fully responsive. The Bootstrap5 Grid System has been largely used in the HTML code, greatly facilitating the development of responsive pages.
+- The website has been successfully tested on Safari, Chrome and Firefox.
+
+
+## Bugs
+
+### Resolved Bugs
+
+- Stripe Webhook not functioning properly: This problem occurred during the refactoring of the code. I accidentally cut with the "/" character a template literal longer than the allowed string length. This caused an ERROR500 during the payments.succeeded phase. After reverting to the previous day repository status, I was able to identify the typo and solve it.
+
+- Minus button not greyed out in the license period quantity selector of the bag page. As mentioned during the course, the code refactoring employed in the lectures causes a misfunction of a JS code. The JS employed to grey out the minus button for the license period data was originally calling the element via ID. With the refactoring, a duplicate of the license period selector was created and the ID would work only on one of the two, used for the mobile view, making the feature not functioning in the desktop view. I duplicated the code with a separate ID to solve the problem.
+
+
+### Unresolved Bugs
+As of today, there are no unresolved bugs in the site
+
+
+## Future Features
+
+- Performance Chart in the Algorithm Details page: in this way the user will have a much better understanding of the past performance of the algorithm
+
+- Enquiry Session: a form used by the user to ask specific or general question to the site owner
+
+- Glossary Terms in Algorithmic Details: each Algorithm in its details will have a section with all the terms related to its strategy, so that the user can easily access them and document itself in the glossary
+
+
+# Section 5: Deployment
+
+
+### Project Deployment - needs adapting for AWS and Stripe
+
+1- Heroku
+
+To deploy the project through Heroku these steps were followed:
+1. Sign up / Log in to [Heroku](https://www.heroku.com/)
+2. From the main Heroku Dashboard page select 'New' and then 'Create New App'
+3. Give the project a name and select a suitable region, then select create app.
+4. Click on the 'Resources' tab and search for 'Heroku Postgres' as this is the add-on you will use for the deployed database.
+5. In the settings tab, reveal config vars and insert the DATABASE_URL along with its SECRET_KEY, the Amazon Web Services access keys (used for data storage) and the STRIPE keys, used for the payment app:
+![heroku-config-vars](readme/images/heroku-config-vars.png)
+6. Once everything is set up, you are ready to deploy: there is the proper functionality in the 'deploy' tab, but this needs prior GitHub connection. Unfortunately, as of the date of this writing, the GitHub connection is not functioning.
+To solve it, you can deploy via Gitpod terminal. To do so:
+     - Log in your Heroku account from GitPod, entering: "heroku login -i"
+     - Once authenticated, enter: "heroku git:remote -a {app_name}", where app_name is the name given on Heroku to the app just created.
+     - Add and commit any changes to the code, if applicable.
+     - Push both to GitHub and Heroku entering the following commands:
+       - "git push origin main"
+       - "git push heroku main"
+
+
+2 - Amazon AWS
+This site uses Amaton AWS for data storage.
+1. Navigate in a browser to Amazon AWS, log in, or create an account and log in. 
+2. Create a new S3 bucket for the site and create a static directory and media directory within the bucket.
+3. From the dashboard - copy the bucket details into the settings file.
+    * you will require the following:
+        - Storage Bucket Name
+        - Storage Bucket Region Name
+        - Access Key ID
+        - Secret Access Key
+    * configure these settings in the settings file
+* in the env.py file created earlier 
+    - add os.environ["AWS_ACCESS_KEY_ID"] = "paste in your access key"
+    - add os.environ["AWS_SECRET_ACCESS_KEY"] = "paste in your secret access key"
+
