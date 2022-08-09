@@ -331,7 +331,7 @@ At the bottom of every page of the site, a banner asks user to submit their emai
 <br/>
 <br/>
 
-# SECTION 4: Testing
+# SECTION 4: Testing, Bugs and Future Features
 
 The tests below are part of the manual testing procedures employed to verify the correct functioning of the website features
 
@@ -444,3 +444,8 @@ All the pages received scores higher than 90 in SEO, Accessibility, and Best Pra
 Below an example both for desktop and mobile views:
 ![lighthouse Validator Desktop](readme/images/lighthouse-validator.png)
 ![lighthouse Validator Mobile](readme/images/mobile-lighthouse-validator.png)
+
+
+* ### Cross Browser and Device Testing
+    - The site has been tested on multiple devices screen sizes with the proper Chrome emulator. All the elements of the pages are rendered properly and are fully responsive. The Bootstrap5 Grid System has been largely used in the HTML code, greatly facilitating the development of responsive pages.
+    - The website has been successfully tested on Safari, Chrome and Firefox.
