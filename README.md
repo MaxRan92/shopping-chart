@@ -512,3 +512,18 @@ This site uses Amaton AWS for data storage.
     - add os.environ["AWS_ACCESS_KEY_ID"] = "paste in your access key"
     - add os.environ["AWS_SECRET_ACCESS_KEY"] = "paste in your secret access key"
 
+
+  ## Credits
+
+### Media Credits
+- Images for companies were found on: <a href="https://www.pexels.com/it-it"><strong>Pexels</strong></a> and adapted using Photoshop.
+
+### Code Credits 
+- The code structure is based on the material provided during the <a href="https://codeinstitute.net/global/"><strong>Code Institute</strong></a> course, especially from the Boutique Ado walkthrough project.
+- Other minor code credits are displayed as comments in the website code.
+
+ 
+## Acknowledgments
+A special thank to:
+- My mentor <a href="https://github.com/maliahavlicek"><strong>Malia</strong></a> for her help, motivation and belief in my capabilities.
+- My family and my partner, for their patience and support demonstrated during the whole course.
