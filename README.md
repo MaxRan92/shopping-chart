@@ -291,3 +291,29 @@ To delete it, it will be sufficient to press the button Delete which will appear
 As anticipated, a user can register, log-in or sign-out via proper and standard allauth forms. He can also access his profile page, in which he can update his delivery information and view his order history.
 
 ![profile-page](readme/images/user-profile.png)
+
+
+
+* ### Glossary
+
+A site user can access the glossary, in which a list of terms will be shown along with its description, for educational purpose.
+If the site user is a superuser (shown below), he can successfully update or delete a term, in order to populate the list and keep it updated.
+
+![glossary](readme/images/glossary.png)
+
+
+* ### Blog and Blog posts
+
+In the blog section, the user can view a list of blog posts with the title and a small description about the topic trated.
+
+![glossary](readme/images/blog.png)
+
+
+The user can click on the post of interest and read the full article.
+
+![glossary](readme/images/post.png)
+
+
+Moreover, the registered user is allowed to post comments and ratings, in order to express his opinion, give a rating and engage with the community.
+
+![glossary](readme/images/comment.png)
