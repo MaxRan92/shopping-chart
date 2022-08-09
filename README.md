@@ -409,16 +409,38 @@ n | Test Case | Result | Pass/Fail
 
 ## Validation Testing
 
+Every piece of code written and used for this Full Stack Web Application has been tested via industry standard validators. 
+
 ### HTML
-All the pages passed successfully the [W3C](https://validator.w3.org/) HTML validation testing
+All the pages passed successfully the [W3C](https://validator.w3.org/) HTML validation test
 
 Below an example:
 ![HTML Validator](readme/images/html-validator.png)
 
 ### CSS
-All the CSS Code passed successfully the [Jigsaw-W3C](https://jigsaw.w3.org/css-validator/) HTML validation testing
+All the CSS Code passed successfully the [Jigsaw-W3C](https://jigsaw.w3.org/css-validator/) HTML validation test
 
-Below and example:
-![HTML Validator](readme/images/css-validator.png)
+Below an example:
+![CSS Validator](readme/images/css-validator.png)
 
 
+### JavaScript
+All the JavaScript Code used passed successfully the [JSHint](https://jshint.com/) validation test
+
+Below an example:
+![JS Validator](readme/images/js-validator.png)
+
+
+### Python
+All the Pyhton Code used passed successfully the [PEP8](http://pep8online.com/) validation test
+
+Below an example:
+![Python Validator](readme/images/py-validator.png)
+
+
+### Lighthouse Audit
+All the pages received scores higher than 90 in SEO, Accessibility, and Best Practices. Performance sometimes had a score of around 80 because some pictures are in high resolution. Given this, the performance of the site looks still solid and page rendering is not excessively slow. 
+
+Below an example both for desktop and mobile views:
+![lighthouse Validator Desktop](readme/images/lighthouse-validator.png)
+![lighthouse Validator Mobile](readme/images/mobile-lighthouse-validator.png)
