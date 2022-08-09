@@ -166,7 +166,7 @@ The overall website is implemented via the Django Framework functionality
 The site uses PostgrSQL, which is an open-source relational database system compatible with most programming languages.
 The database schema below illustrates the Data Model and Fields created, with the relationship between them.
 
-INSERT DIAGRAM HERE
+![ERD](readme/images/erd.png)
 
 ## Front-End: Site Structure
 Below are presented the wireframes created during the site project planning, which consitutes a first draft on how the site should appear, taking into consideration the user stories included.
