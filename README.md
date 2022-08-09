@@ -498,7 +498,8 @@ To solve it, you can deploy via Gitpod terminal. To do so:
 
 
 2 - Amazon AWS
-This site uses Amaton AWS for data storage.
+<br>
+Shopping Chart uses Amazon AWS for data storage.
 1. Navigate in a browser to Amazon AWS, log in, or create an account and log in. 
 2. Create a new S3 bucket for the site and create a static directory and media directory within the bucket.
 3. From the dashboard - copy the bucket details into the settings file.
