@@ -340,6 +340,66 @@ The tests below are part of the manual testing procedures employed to verify the
 n | Test Case | Result | Pass/Fail 
 ------------- | ------------- | ------------- | ------------ 
 1 | Account register | Clicking on the signup button, the user goes in the signup page, compiles the required fields and clicks on the Sign Up Button | Pass
-2 | Email Verification| After submitting his data, the user is redirected to a new page and is informed about a confirmation email sent to the address provided in the signup form| pass |
+2 | Email Verification| After submitting his data, the user is redirected to a new page and is informed about a confirmation email sent to the address provided in the signup form| pass
 3 | Confirmation email | The user effectively receives the mail with the confirmation link, which leads to the confirmation page of the site. Once confirmed, the account is successfully created and the user can log in with his new profile | pass |
-4 | Log Out | Clicking on My Account > Log Out, the user logs out of the site after confirmation| pass |
+4 | Log Out | Clicking on My Account > Log Out, the user logs out of the site after confirmation| pass
+
+**General site functiionality testing:**
+
+n | Test Case | Result | Pass/Fail
+------------- | ------------- | ------------- | ------------ 
+1 | Algorithm List Pages | Clicking in the all algorithm button, the user effectively views the list, that can be filtered and sorted. Same applies for every macro category (stock, fixed income, Crypto&Fx) | pass
+2 | Glossary Page | Clicking in the proper tab, the glossary is correctly loaded | pass
+3 | Blog Page| Clicking in the proper tab, the blog is correctly loaded | pass
+4 | My Account Page| Clicking on the My Account button, the user can enter is profile page | pass
+5 | Shopping Bag Page | Clicking on the Shopping Bag button, the user can view his current shopping bag | pass
+6 | Homepage | Clicking on the site logo, the user can view the homepage | pass
+
+
+**Algorithm details testing:**
+
+n | Test Case | Result | Pass/Fail
+------------- | ------------- | ------------- | ------------ 
+1 | Algorithm Detail | clicking on the algorithm card in the list, the user can enter in its details page | pass 
+2 | License Period Selector | The user can select the license period via plus and minus buttons, without going below 1 | pass
+3 | Keep Shopping Button | The Button effectively redirects to the algorithm list | pass
+4 | Algorithm Delete | As an Admin, the user can delete the product via proper button | pass
+5 | Algorithm Update | As an Admin, the user can go to the product update page via proper button | pass
+
+**Shopping bag testing:**
+
+n | Test Case | Result | Pass/Fail
+------------- | ------------- | ------------- | ------------ 
+1 | Add to Bag | clicking the add to bag button, the product is effectively added in the bag | pass
+2 | License period selector | The user can update the license period previously chosen | pass
+3 | Remove Button | The user can remove an algorithm in the bag via proper button | pass
+4 | Secure Checkout button | By clicking the button, the user is redirected to the checkout page | pass
+5 | Keep Shopping Button | By clicking the button, the user is effectively redirected to the algorithm list | pass
+
+**Checkout testing:**
+n | Test Case | Result | Pass/Fail
+------------- | ------------- | ------------- | ------------ 
+1 | Name and delivery details | User is presented with a form in which he can insert all the relevant data | pass
+2 | Adjust bag button | Clicking it, the user can go back to the bag to adjust it | pass
+3 | Product List and Subtotal | User is presented with an order summary withthe list of items chosen along with its subtotal | pass
+4 | Complete Order Button | Clicking the button, the order is processed and a confirmation page loads with all the relevant order informations | pass
+5 | Order Email Confirmation | The user is notified via email of the order | pass
+
+**Glossary testing:**
+
+n | Test Case | Result | Pass/Fail
+------------- | ------------- | ------------- | ------------ 
+1 | List of Terms | The user can easily see the list of terms along with their descriptions | pass
+2 | Edit Terms | As an Admin, the user can click on Edit and upload a form to amend the term name or description | pass
+3 | Delete Terms | As an Admin, the user can click on Delete and delete the term from the list | pass
+4 | Upload new Terms | As an Admin, the user can compile the form for a new term and submit it successfully | pass
+
+
+**Blog testing:**
+
+n | Test Case | Result | Pass/Fail
+------------- | ------------- | ------------- | ------------ 
+1 | Blog list view | in the blog list, a user can click on the read more button and enter in the blog post specific page | pass
+2 | Post Comment | The registered user writes a comment in the form, assigns a rating ad submit it successfully | pass
+3 | Edit Comment | The registered user can Edit only his own comments and ratings successfully | pass
+4 | Delete Comment | The registered user can Delete only his own comments and ratings | pass
