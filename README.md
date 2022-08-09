@@ -166,6 +166,13 @@ The overall website is implemented via the Django Framework functionality
 The site uses PostgrSQL, which is an open-source relational database system compatible with most programming languages.
 The database schema below illustrates the Data Model and Fields created, with the relationship between them.
 
+Some of the models take inspiration from the CI PP5 walkthrough project, however some of those models had been modified to better assist a product that does not have a delivery cost or size: the models has been modified including fields such has Return, Volatility, License Period and Keywords, the latter for better SEO management. 
+Moreover, four additional models were created:
+ - Newsletter: to manage in the database the request to be added to the mailing list from the user
+ - Glossary: to manage the list of terms and description
+ - Post: to store information regardin the blog posts
+ - Comment: to store user comments and 1 to 5 star user ratings 
+
 ![ERD](readme/images/erd.png)
 
 ## Front-End: Site Structure
