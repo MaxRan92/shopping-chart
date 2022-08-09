@@ -24,7 +24,7 @@ The site offers various kind of strategies which cover different asset classes:
 - Cryptocurrencies
 - Fx Rates
 
-This business idea is intrinsically adapt to an Ecommerce, since the niche of educated users interested in investing via trading algorithms have a knowledge and interest in the world of coding and web in general that is far higher than average.
+This business idea is intrinsically adapt to an Ecommerce, since the niche of educated users interested in investing via algorithms have a knowledge and interest in the world of coding (and web in general) that is far higher than average.
 
 Moreover, the product is much easier to promote and sell via a web platform: physical stores are not competing in this sector.
 
@@ -166,12 +166,12 @@ The overall website is implemented via the Django Framework functionality
 The site uses PostgrSQL, which is an open-source relational database system compatible with most programming languages.
 The database schema below illustrates the Data Model and Fields created, with the relationship between them.
 
-Some of the models take inspiration from the CI PP5 walkthrough project, however some of those models had been modified to better assist a product that does not have a delivery cost or size: the models has been modified including fields such has Return, Volatility, License Period and Keywords, the latter for better SEO management. 
+Some of the models take inspiration from the CI PP5 walkthrough project, however some of those models had been modified and made original to better assist a product that does not have a delivery cost or size: the models has been modified including fields such has Return, Volatility, License Period and Keywords, the latter for better SEO management. 
 Moreover, four additional models were created:
  - Newsletter: to manage in the database the request to be added to the mailing list from the user
  - Glossary: to manage the list of terms and description
  - Post: to store information regardin the blog posts
- - Comment: to store user comments and 1 to 5 star user ratings 
+ - Comment: to store user comments with the addition of 1 to 5 star user ratings 
 
 ![ERD](readme/images/erd.png)
 
@@ -219,7 +219,7 @@ Most of the images were modified via Adobe Photoshop to increase their quality, 
 
 Several images are added in the site, increasing the tech flavour that the user experiences navigating the pages.
 
-Moreover, how can one represent a list of algorithm via images? The choice was to create a template image that adapts to the algorithm main category, subcategory and strategy. Changing colours and wording the risk of repetitive cards is mitigated.
+A big question was: how can one represent a list of algorithm via images? The choice was to create a template image that adapts to the algorithm main category, subcategory and strategy. By changing colours and wording, the risk of repetitive cards is mitigated.
 
 ![Product images](readme/images/product-images.png)
 
@@ -250,7 +250,7 @@ The Algorithm List page contains a list of all of the algorithms available on th
 
 * ### Algorithm Detail:
 
-The algorithm detail page is reached by clicking on the image of any of the algorithm cards in the listr. The user will retrieve the most important information about the produtct, such as name, license price per month, rating, description, total return and volatility. With buttons the user can specify how many months of licensing he wants to purchase and add it to the shopping bag.
+The algorithm detail page is reached by clicking on the image of any of the algorithm cards in the list. The user will retrieve the most important information about the produtct, such as name, license price per month, rating, description, total return and volatility. With buttons the user can specify how many months of licensing he wants to purchase and add it to the shopping bag.
 
 If the user is a superuser, from this page he can access links to update or delete the algorithm
 
@@ -311,7 +311,7 @@ If the site user is a superuser (shown below), he can successfully update or del
 
 * ### Blog and Blog posts
 
-In the blog section, the user can view a list of blog posts with the title and a small description about the topic trated.
+In the blog section, the user can view a list of blog posts with the title and a small description about the topic treated.
 
 ![blog](readme/images/blog.png)
 
@@ -329,7 +329,7 @@ The user can also edit and delete his previous comments and ratings.
 
 * ### Newsletter Signup
 
-At the bottom of every page of the site, a banner asks user to submit their email in order to receive future offers and material. The user must consento to the site privacy policy, which can be read via link below.
+At the bottom of every page of the site, a banner asks the user to submit their email in order to receive future offers and material. The user must consento to the site privacy policy, which can be read via link below.
 
 ![newsletter](readme/images/newsletter.png)
 
@@ -348,7 +348,7 @@ The tests below are part of the manual testing procedures employed to verify the
 
 n | Test Case | Result | Pass/Fail 
 ------------- | ------------- | ------------- | ------------ 
-1 | Account register | Clicking on the signup button, the user goes in the signup page, compiles the required fields and clicks on the Sign Up Button | Pass
+1 | Account Registration | Clicking on the signup button, the user goes in the signup page, compiles the required fields and clicks on the Sign Up Button | Pass
 2 | Email Verification| After submitting his data, the user is redirected to a new page and is informed about a confirmation email sent to the address provided in the signup form| pass
 3 | Confirmation email | The user effectively receives the mail with the confirmation link, which leads to the confirmation page of the site. Once confirmed, the account is successfully created and the user can log in with his new profile | pass |
 4 | Log Out | Clicking on My Account > Log Out, the user logs out of the site after confirmation| pass
@@ -357,9 +357,9 @@ n | Test Case | Result | Pass/Fail
 
 n | Test Case | Result | Pass/Fail
 ------------- | ------------- | ------------- | ------------ 
-1 | Algorithm List Pages | Clicking in the all algorithm button, the user effectively views the list, that can be filtered and sorted. Same applies for every macro category (stock, fixed income, Crypto&Fx) | pass
-2 | Glossary Page | Clicking in the proper tab, the glossary is correctly loaded | pass
-3 | Blog Page| Clicking in the proper tab, the blog is correctly loaded | pass
+1 | Algorithm List Pages | Clicking on the all algorithm button, the user effectively views the list, that can be filtered and sorted. Same applies for every macro category (stock, fixed income, Crypto&Fx) | pass
+2 | Glossary Page | Clicking on the proper tab, the glossary is correctly loaded | pass
+3 | Blog Page| Clicking on the proper tab, the blog is correctly loaded | pass
 4 | My Account Page| Clicking on the My Account button, the user can enter is profile page | pass
 5 | Shopping Bag Page | Clicking on the Shopping Bag button, the user can view his current shopping bag | pass
 6 | Homepage | Clicking on the site logo, the user can view the homepage | pass
@@ -369,7 +369,7 @@ n | Test Case | Result | Pass/Fail
 
 n | Test Case | Result | Pass/Fail
 ------------- | ------------- | ------------- | ------------ 
-1 | Algorithm Detail | clicking on the algorithm card in the list, the user can enter in its details page | pass 
+1 | Algorithm Detail | Clicking on the algorithm card in the list, the user can enter in its details page | pass 
 2 | License Period Selector | The user can select the license period via plus and minus buttons, without going below 1 | pass
 3 | Keep Shopping Button | The Button effectively redirects to the algorithm list | pass
 4 | Algorithm Delete | As an Admin, the user can delete the product via proper button | pass
@@ -379,7 +379,7 @@ n | Test Case | Result | Pass/Fail
 
 n | Test Case | Result | Pass/Fail
 ------------- | ------------- | ------------- | ------------ 
-1 | Add to Bag | clicking the add to bag button, the product is effectively added in the bag | pass
+1 | Add to Bag | Clicking on the add to bag button, the product is effectively added in the bag | pass
 2 | License period selector | The user can update the license period previously chosen | pass
 3 | Remove Button | The user can remove an algorithm in the bag via proper button | pass
 4 | Secure Checkout button | By clicking the button, the user is redirected to the checkout page | pass
@@ -408,7 +408,7 @@ n | Test Case | Result | Pass/Fail
 
 n | Test Case | Result | Pass/Fail
 ------------- | ------------- | ------------- | ------------ 
-1 | Blog list view | in the blog list, a user can click on the read more button and enter in the blog post specific page | pass
+1 | Blog list view | In the blog list, a user can click on the read more button and enter in the blog post specific page | pass
 2 | Post Comment | The registered user writes a comment in the form, assigns a rating ad submit it successfully | pass
 3 | Edit Comment | The registered user can Edit only his own comments and ratings successfully | pass
 4 | Delete Comment | The registered user can Delete only his own comments and ratings | pass
