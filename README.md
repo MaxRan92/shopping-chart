@@ -306,14 +306,40 @@ If the site user is a superuser (shown below), he can successfully update or del
 
 In the blog section, the user can view a list of blog posts with the title and a small description about the topic trated.
 
-![glossary](readme/images/blog.png)
+![blog](readme/images/blog.png)
 
 
 The user can click on the post of interest and read the full article.
 
-![glossary](readme/images/post.png)
+![blog-post](readme/images/post.png)
 
 
 Moreover, the registered user is allowed to post comments and ratings, in order to express his opinion, give a rating and engage with the community.
+The user can also edit and delete his previous comments and ratings.
 
-![glossary](readme/images/comment.png)
+![post-comments](readme/images/comment.png)
+
+
+* ### Newsletter Signup
+
+At the bottom of every page of the site, a banner asks user to submit their email in order to receive future offers and material. The user must consento to the site privacy policy, which can be read via link below.
+
+![newsletter](readme/images/newsletter.png)
+
+
+<br/>
+<br/>
+<br/>
+
+# SECTION 4: Testing
+
+The tests below are part of the manual testing procedures employed to verify the correct functioning of the website features
+
+**Authorisation & authentication Testing:**
+
+n | Test Case | Result | Pass/Fail 
+------------- | ------------- | ------------- | ------------ 
+1 | Account register | Clicking on the signup button, the user goes in the signup page, compiles the required fields and clicks on the Sign Up Button | Pass
+2 | Email Verification| After submitting his data, the user is redirected to a new page and is informed about a confirmation email sent to the address provided in the signup form| pass |
+3 | Confirmation email | The user effectively receives the mail with the confirmation link, which leads to the confirmation page of the site. Once confirmed, the account is successfully created and the user can log in with his new profile | pass |
+4 | Log Out | Clicking on My Account > Log Out, the user logs out of the site after confirmation| pass |
